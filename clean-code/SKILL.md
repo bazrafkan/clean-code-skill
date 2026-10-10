@@ -1,11 +1,14 @@
 ---
 name: clean-code
-description: Use when implementing features, fixing bugs, refactoring or reviewing code in any language. Applies Clean Code principles adapted to modern practice, with a smell checklist for a final self-review.
+description: Use when implementing features, fixing bugs, refactoring, designing or reviewing code in any language. Applies Clean Code and GoF design patterns, adapted to modern practice, with a final self-review checklist.
 ---
 
-# Clean Code
+# Clean Code and Design Patterns
 
-The goal is code that the next reader understands quickly and can change safely. The rules come from Robert C. Martin's *Clean Code* (2008), adapted to modern languages: where the book gives Java-era specifics, this skill keeps the principle. Codes in parentheses (G5, N7, T4...) point to the book's Chapter 17 heuristics.
+The goal is code that the next reader understands quickly and can change safely. The skill draws on two books, both adapted to modern languages. Where a book gives Java- or C++-era specifics, the skill keeps the principle.
+
+- **Robert C. Martin, *Clean Code* (2008).** Codes in parentheses (G5, N7, T4...) point to its Chapter 17 heuristics.
+- **Gamma, Helm, Johnson and Vlissides, *Design Patterns* (1994), the "Gang of Four" (GoF).** It is summarized in "Design patterns" below. For the full entry on each of its 23 patterns, read `references/design-patterns.md` in this skill's folder, if present.
 
 These are heuristics driven by values, not laws. If a rule would make a piece of code harder to read in its context, readability wins. Always know *why* you apply a rule.
 
@@ -280,13 +283,90 @@ Kent Beck's four rules, in priority order:
   - Use fake clocks and latches instead of `sleep` in tests.
 - **Concurrency helps throughput only when work waits** (I/O-bound).
 
-## Book advice that doesn't transfer literally
+### Design patterns (GoF)
+A design pattern is a named solution to a recurring design problem, with known consequences.
+- The name gives you a shared vocabulary.
+- The consequences are what you pay for that solution.
 
-Follow the language and project instead of these Java-era specifics:
+**Principles behind every pattern**
+- **Program to an interface, not an implementation.**
+  - Where an abstraction exists or a seam is real, depend on it rather than on the concrete class.
+  - Otherwise, a class's public API is its interface. Don't add an interface for the sake of it.
+- **Favor object composition over class inheritance.**
+  - Inheritance is white-box reuse: fixed at compile time, coupled to the parent's internals.
+  - Composition is black-box reuse: parts can be swapped through their interfaces.
+  - Inherit for substitutability, preferably from abstract types, not merely to reuse code.
+- **Encapsulate what varies.** Put the aspect that varies (or demonstrably will) behind its own interface, so it can change without redesign. Examples: an algorithm, a state, which class to create, a platform, a request.
+- **Flexibility costs readability.**
+  - Highly parameterized, dynamic designs are harder to understand than static code.
+  - Use them only when they simplify more than they complicate, and in recognizable shapes.
+
+**When and how to apply one**
+- **Start from a concrete problem or smell, never from the wish to use a pattern.**
+  - The book warns that patterns add indirection and should be applied only when their flexibility is actually needed.
+  - This skill sharpens that to *needed now* (YAGNI), except at hard-to-reverse seams (see Systems).
+  - Two or three stable cases rarely justify a pattern.
+- **Read the pattern's applicability and consequences first.** Know what it lets vary and what it costs. The table below and `references/design-patterns.md` cover both. The reference also maps causes of redesign to patterns.
+- **Check the language and the codebase's existing tools first.** Many patterns collapse to a lambda, a sealed type with `match`, a generator, an event, a wrapper or injection. See the chooser's last column.
+- **Use patterns as refactoring targets.** When code degrades in a known way, refactor toward the pattern that removes that cause. Typical cases: a repeated switch, a class explosion, scattered `new ConcreteX()`.
+- **Name participants in domain terms that keep the role visible** (N3): `PdfExportStrategy`, `RetryingClientDecorator`, `createParser()`. Use one naming convention per role.
+- **Combine patterns freely when each solves a real need.** Good designs often contain several.
+
+**Quick chooser.** Prefer the lighter form unless the full pattern's extra capability is needed.
+
+| Pattern | Reach for it when | Often lighter today |
+|---|---|---|
+| Abstract Factory | whole families of related objects must be swapped together and never mixed | a DI module per family; a record of constructor functions |
+| Builder | one multi-step construction must produce different representations, or it is order-dependent with validation at the end | named/default args, records with copy, an options object |
+| Factory Method | a base class owns a workflow and subclasses choose the concrete product | pass a factory function; static named constructors |
+| Prototype | new kinds differ only in state, or classes are known only at run time | copy-with on immutable values; constructor references |
+| Singleton | exactly one instance must exist (a hardware or OS resource) | create once at the composition root and inject it |
+| Adapter | an existing class has the wrong interface for its client | a mapping function; trait or extension conformance |
+| Bridge | two dimensions vary independently (abstraction × implementation) | a constructor-injected backend interface |
+| Composite | part–whole trees that clients handle uniformly | a sealed tree type plus recursive functions |
+| Decorator | stackable, optional behavior around an object with the same interface | function wrappers, middleware |
+| Facade | a simple entry point into a complex subsystem | a module's public API with the internals hidden |
+| Flyweight | measured memory pressure from huge numbers of similar objects | interning, caches, dictionary encoding |
+| Proxy | access control: lazy loading, remote, permissions, smart reference | lazy values, generated clients, smart pointers |
+| Chain of Responsibility | the first capable handler in a changeable set should take a request | a `(req, next)` middleware pipeline |
+| Command | requests must be queued, logged, undone or passed around as data | closures; action or message objects |
+| Interpreter | evaluating a small, simple grammar | a sealed AST with pattern matching; a parser library |
+| Iterator | traversing a structure without exposing it | the language's iterator protocol and generators |
+| Mediator | many-to-many interactions in a group need one owner | a controller, view-model, store or orchestrator |
+| Memento | snapshot and restore without exposing internals | immutable state values; serialization |
+| Observer | an unknown number of dependents must react to a change | events, signals, streams (always unsubscribable) |
+| State | behavior changes with state, and the same switch repeats across operations | a sealed state type plus a `next(state, event)` function |
+| Strategy | interchangeable algorithms chosen by configuration or at run time | pass a function; a map of named functions |
+| Template Method | a fixed skeleton with a few varying steps | a higher-order function; `try/finally` or context managers |
+| Visitor | many operations over a stable set of node types | exhaustive pattern matching over a sealed type |
+
+**Pattern smells**
+
+Each of these means the pattern is solving no real problem; remove or simplify it:
+- an interface with one implementation and no second in sight
+- a factory that creates only one thing
+- a strategy that is never swapped
+- a decorator stack whose order nobody can explain
+- an observer chain nobody can trace
+- a Singleton used as convenient global state
+- a Visitor over a hierarchy that keeps changing
+- a Builder for a three-field value object
+
+## Advice from the books that doesn't transfer literally
+
+Follow the language and project instead of these Java- and C++-era specifics.
+
+From *Clean Code* (CC):
 - wildcard imports (J1)
 - JavaBean `get`/`set` prefixes
 - "always use unchecked exceptions"
 - "no `I` prefix on interfaces"
+
+From *Design Patterns* (GoF):
+- class adapters built with multiple inheritance
+- Singleton enforced by the class itself rather than by the composition root
+
+From both books:
 - class hierarchies as the default answer to switches
 
 ## Example (original, illustrative)
@@ -347,6 +427,7 @@ Run through this before saying the work is done. Fix what you find, or say why y
 - [ ] Code sits where a reader would look for it, with high cohesion and a minimal public surface.
 - [ ] Vendor types stay at the edge. Construction is separated from use.
 - [ ] Magic values are named. Configuration lives at a high level.
+- [ ] Any design pattern solves a present need, uses the lightest form the language allows, and its role shows in the names.
 
 **Errors**
 - [ ] Errors can't be silently ignored, carry context, and use the language's idiom.
@@ -371,5 +452,6 @@ Run through this before saying the work is done. Fix what you find, or say why y
 When you finish an implementation, briefly mention:
 - any notable cleanups beyond the literal request
 - the trade-offs you chose, such as where you deliberately didn't apply a rule
+- any design pattern you introduced, and why
 - any checks you couldn't run
 - any smells you noticed outside the task's scope and left alone
