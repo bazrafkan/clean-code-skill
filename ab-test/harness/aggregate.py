@@ -9,7 +9,7 @@ import statistics
 import sys
 from pathlib import Path
 
-from config import COMPLEXITY, REPETITIONS
+from config import COMPLEXITY, HOLDOUT_PREFIX, REPETITIONS
 
 CRITERIA = ("overall", "readability", "design", "robustness", "tests", "scope")
 METRICS = [
@@ -171,6 +171,8 @@ def main():
     table = metric_table(rows, tasks)
     combined, raw, verdicts = judgments(packets_dir, key)
     scopes = {"ALL": tasks, **{level: [t for t in tasks if COMPLEXITY[t] == level] for level in ("small", "medium", "large")}}
+    scopes["seen"] = [t for t in tasks if not t.startswith(HOLDOUT_PREFIX)]
+    scopes["holdout"] = [t for t in tasks if t.startswith(HOLDOUT_PREFIX)]
     wins_by_scope = {
         scope: {c: win_summary(combined, c, scope_tasks) for c in (CRITERIA if scope == "ALL" else ("overall",))}
         for scope, scope_tasks in scopes.items()

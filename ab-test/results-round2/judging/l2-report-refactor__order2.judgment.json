@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "1",
+      "design": "1",
+      "robustness": "tie",
+      "tests": "1",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Both refactors are correct and keep the -0.0, tie-break and sum() behaviour, but Implementation 2 adds things the task doesn't need: label constants (TITLE.upper() ties the text title to the shared one), a generic _text_row, a module docstring and a larger public API. Implementation 1 is shorter and more direct, and its tests check every format for empty input, ties and negative zero."
+    },
+    {
+      "pair": 2,
+      "readability": "tie",
+      "design": "tie",
+      "robustness": "tie",
+      "tests": "2",
+      "scope": "tie",
+      "overall": "2",
+      "confidence": "low",
+      "reason": "Both are correct registry-based refactors: Implementation 1 has named record fields but a slightly awkward loop for joining Markdown blocks, while Implementation 2 stores the summary as raw tuples but shares row and table helpers neatly. Implementation 2's tests compare the full empty-input output for all three formats, which guards the byte-for-byte requirement better."
+    },
+    {
+      "pair": 3,
+      "readability": "2",
+      "design": "2",
+      "robustness": "tie",
+      "tests": "2",
+      "scope": "2",
+      "overall": "2",
+      "confidence": "medium",
+      "reason": "Implementation 1 is well structured but heavier than needed: a module docstring, a public read/summarize/render API, a TEXT_WIDTH constant and table helpers that also emit the headings. Implementation 2's renderers read like the output itself, it comments the -0.0 and sum() pitfalls, and its tests target exactly those preserved behaviours."
+    }
+  ]
+}

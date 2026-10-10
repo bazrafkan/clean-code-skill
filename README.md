@@ -15,7 +15,7 @@ Where the books give Java- or C++-era specifics, the skill keeps the underlying 
 
 ```
 clean-code/
-├── SKILL.md                     # compact core (~3.5k tokens), loaded when the skill triggers
+├── SKILL.md                     # compact core (~3.9k tokens), loaded when the skill triggers
 └── references/
     ├── clean-code-rules.md      # every rule in full, with rationale and an example
     └── design-patterns.md       # principles + all 23 GoF patterns
@@ -27,13 +27,14 @@ Only `SKILL.md` enters the context when the skill triggers. The reference files 
 
 ### `clean-code/SKILL.md`
 
+- **Smallest change first.** The skill aims for the smallest change that fully solves the task, with nothing speculative added. Ideas for extra validation, robustness or refactoring go in the report instead.
 - **Precedence rules.** When rules conflict, the order is tests and correctness, then the user's instructions and task scope, then project conventions, then the skill's rules.
 - **Workflow:**
   1. Read the surrounding code.
-  2. Make it work in small tested steps.
-  3. Do a mandatory "make it right" pass.
+  2. Make it work in small tested steps, pinning legacy behavior with tests first.
+  3. Do a "make it right" pass on the code you wrote or touched.
   4. Stay in scope.
-  5. Verify, without ever weakening tests.
+  5. Verify with the project's own checks, without ever weakening tests.
 - **A "done" checklist**, placed right after the workflow.
 - **Core rules, a few lines per topic:**
   - names, functions, comments and formatting
@@ -72,16 +73,22 @@ The file also covers how to choose between similar patterns (Adapter vs Bridge, 
 
 ## Does it help? (A/B test)
 
-`ab-test/` contains a pre-registered, blind A/B test of the skill: 6 Python tasks, 36 agent runs, hidden tests and independent judges.
+`ab-test/` contains a pre-registered, blind A/B test of the skill, in two rounds, with hidden tests and independent judges.
 
-The first round was inconclusive on overall quality:
+**Round 1 (v1: 6 tasks, 36 runs): inconclusive.**
 - **Quality:** 6 wins, 8 losses and 4 ties in blind review.
-- **Correctness:** identical.
 - **Better with the skill:** tests and function-level metrics.
 - **Worse with the skill:** larger diffs.
 - **Cost:** about +44% tokens.
 
-See `ab-test/results/REPORT.md`.
+**Round 2 (v2, the current skill: 8 tasks including 2 holdout tasks, 48 runs): helps under the pre-registered rule.**
+- **Quality:** 14 wins, 3 losses and 7 ties (82%, 95% CI 59–94%). The holdout tasks went 5–0–1.
+- **Better with the skill:** smaller, simpler code, always tested.
+- **Worse with the skill:** robustness, because it adds fewer defensive checks.
+- **Cost:** about +16% tokens and 1.5× wall time.
+- **Caveat:** part of the margin comes from baseline runs that wrote no tests.
+
+Correctness was identical in both rounds. See `ab-test/results/REPORT.md` and `ab-test/results-round2/REPORT.md`.
 
 ## Install
 

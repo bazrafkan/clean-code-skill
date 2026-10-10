@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "1",
+      "design": "tie",
+      "robustness": "tie",
+      "tests": "1",
+      "scope": "tie",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Both are correct and minimal, but Implementation 1's helpers have clearer names and signatures than Implementation 2's helper, which takes `now` plus year and month. Implementation 1's tests are better too: they add regression checks for daily and weekly jobs, and the bad-day cases are parametrized and test a missing day explicitly."
+    },
+    {
+      "pair": 2,
+      "readability": "tie",
+      "design": "tie",
+      "robustness": "tie",
+      "tests": "1",
+      "scope": "tie",
+      "overall": "1",
+      "confidence": "low",
+      "reason": "The code is about equivalent and correct; Implementation 1 uses a commented first-of-month-plus-31-days trick, while Implementation 2 computes the year and month explicitly. Implementation 1's tests are better organized and also cover daily and weekly behaviour and unknown kinds in next_run and describe, while Implementation 2 crams several asserts into each test."
+    },
+    {
+      "pair": 3,
+      "readability": "1",
+      "design": "1",
+      "robustness": "2",
+      "tests": "1",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Implementation 2 adds an unrequested day-range check inside next_run that repeats validate and has no test. That check does stop day 32 from being silently clamped. Implementation 1 splits things a little more than needed but stays in scope, and its tests are much broader, including daily and weekly regressions and unknown-kind errors."
+    }
+  ]
+}

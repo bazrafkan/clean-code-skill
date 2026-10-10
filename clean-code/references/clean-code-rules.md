@@ -1,6 +1,6 @@
 # Clean Code rules in full
 
-This is the detailed version of the rules summarized in `SKILL.md`, with rationale, nuances and examples. Read it when a rule's application is unclear, when reviewing code, or when you need an example.
+This is the detailed version of the rules summarized in `SKILL.md`, with rationale, nuances and examples. Most tasks don't need it. Read it when a rule's application is genuinely unclear, or when reviewing code.
 
 Codes in parentheses (G5, N7, T4...) point to Chapter 17 of Robert C. Martin's *Clean Code* (2008).
 
@@ -8,16 +8,17 @@ Codes in parentheses (G5, N7, T4...) point to Chapter 17 of Robert C. Martin's *
 
 ### 1. Before writing
 - **Read the surrounding code.** Learn its naming lexicon, error-handling style, test layout, and how similar features are built. Reuse its vocabulary and helpers instead of inventing parallel ones.
-- **Find the build, test and lint commands.** Each should be a single command (E1, E2).
+- **Find the build, test and lint commands the project already has** in its config files, scripts and README. Each should be a single command (E1, E2).
 - **Understand the requirement.** If a behavior is ambiguous, don't invent it. Ask, or implement the clear part and flag the open question. A pending or skipped test with a reason can document it (T4).
+- **Pin legacy behavior first.** Before changing code that has no tests, add a few tests that capture what it does today, so the change can't silently alter it.
 
 ### 2. Make it work, in small verified steps
-- **Test first where practical.** Write a failing test, make it pass with the simplest code, then refactor (red, green, refactor). At minimum, new behavior ships with a test that would fail without it.
+- **Test first where practical.** Write a failing test, make it pass with the simplest code, then refactor (red, green, refactor). At minimum, new behavior and fixed bugs ship with a test that would fail without the change. Keep tests focused on what the task changed.
 - **Keep the system green between steps.** Never pile up many unverified changes.
 - **A clumsy first draft is normal.** Nobody writes clean code in one pass. But a draft is not done.
 
-### 3. Make it right (mandatory, not optional)
-- **"It works" is not "done."** Before finishing, walk top to bottom through the code you wrote, using the "Done checklist" in `SKILL.md`.
+### 3. Make it right, in the code you wrote or touched
+- **"It works" is not "done."** Before finishing, walk top to bottom through the code you wrote, using the "Done checklist" in `SKILL.md`. "Right" means your change reads well. It is not a licence to grow the change.
 - **Refactor in tiny, behavior-preserving steps** and run the tests after each one.
 - **For structural moves, use parallel change.**
   - Add the new structure beside the old one.
@@ -27,6 +28,7 @@ Codes in parentheses (G5, N7, T4...) point to Chapter 17 of Robert C. Martin's *
 - **Understand the algorithm (G21).** Passing the tests you thought of is not enough. Know why the code is correct, and refactor until that is obvious.
 
 ### 4. Scope discipline (a bounded Boy Scout Rule)
+- **The smallest change that fully solves the task.** Handle every case the task states or its domain clearly implies. Don't add speculative extras: validation or error cases nobody asked for, thread safety in single-threaded code, NaN or type checks, logging, configuration options, constants for obvious values, abstractions, generic typing, new files. Each one is more code to review and maintain. If you think one is needed, say so in your report instead.
 - **Leave the code you touch a little cleaner.** For example, in the function you are editing:
   - rename a misleading local
   - extract a tangled condition
@@ -39,7 +41,8 @@ Codes in parentheses (G5, N7, T4...) point to Chapter 17 of Robert C. Martin's *
 - **Restructure before adding a variant when the same edit repeats.** If each new variant (type, case, option) needs the same edit in several places, restructure first so the next variant is one isolated addition. Do this only if the restructure stays within the task's footprint. Otherwise propose it.
 
 ### 5. Verify
-- **Run the relevant checks.** That means the tests (including slower integration or acceptance tests when feasible here), linter, formatter and type checker. Report what you couldn't run.
+- **Run the checks the project already configures.** That means its tests (including slower integration or acceptance tests when feasible here) and whatever linter, formatter and type checker its config sets up. Don't install or run tools the project doesn't use. Report what you couldn't run.
+- **Leave nothing generated behind:** caches, build output, scratch scripts.
 - **Never override safeties to get green (G4).** Don't weaken, skip or delete tests, and don't silence warnings. If a test looks wrong, say so explicitly rather than editing it quietly.
 
 ## Rules
@@ -166,7 +169,7 @@ Codes in parentheses (G5, N7, T4...) point to Chapter 17 of Robert C. Martin's *
   - make absence explicit in the type (`Optional`, `T?`, `Option`).
   - Don't pass null to functions that don't explicitly accept it.
 - **Use the Special Case pattern for expected business variations** instead of using exceptions for control flow.
-- **Validate at trust boundaries** (user input, I/O, public API) and trust the types inside.
+- **Validate where the task asks and at real trust boundaries** (user input, I/O, public API), and trust the types inside. Don't add checks the spec doesn't call for.
 - **Never swallow errors silently.** An intentionally empty catch block needs a comment saying why ignoring the error is correct.
 - **Be precise (G26):**
   - No binary floats for money. Use integer minor units or a decimal or Money type.

@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "1",
+      "design": "1",
+      "robustness": "2",
+      "tests": "1",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Implementation 2 adds a 'tried' set that silently skips repeated channels, which the spec never asked for and which changes the required behavior; it also adds extra modules and constants, though its empty-address handling and list copying are small robustness gains. Implementation 1 is lean, correct and backed by focused tests that cover the spec."
+    },
+    {
+      "pair": 2,
+      "readability": "2",
+      "design": "2",
+      "robustness": "1",
+      "tests": "tie",
+      "scope": "2",
+      "overall": "2",
+      "confidence": "medium",
+      "reason": "Implementation 1 handles more edge cases (positional placeholders, empty addresses, list copying) but adds unrequested extras such as rejecting a string preferred_channels with TypeError, plus heavy docstrings and an extra module. Implementation 2 meets the spec with less code and has equally thorough tests."
+    },
+    {
+      "pair": 3,
+      "readability": "2",
+      "design": "tie",
+      "robustness": "1",
+      "tests": "tie",
+      "scope": "2",
+      "overall": "2",
+      "confidence": "low",
+      "reason": "Both are correct and well tested; Implementation 1 adds modest robustness (IndexError handling, empty-address check, list copy) and a separate delivery module, plus unneeded defaults on a mutable DeliveryReport. Implementation 2 is leaner and meets the spec directly, so it is slightly easier to maintain."
+    }
+  ]
+}

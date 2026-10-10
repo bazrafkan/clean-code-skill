@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "1",
+      "design": "1",
+      "robustness": "2",
+      "tests": "1",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "high",
+      "reason": "Implementation 1 is a small, correct, spec-matching solution with focused tests, while Implementation 2 has no tests and adds things the task did not ask for (a lock, epsilon tolerance, public properties, a client TypeError check). Implementation 2 handles more edge cases, such as bool and non-int values and a clock that goes backwards, but that does not make up for the missing tests and extra scope."
+    },
+    {
+      "pair": 2,
+      "readability": "1",
+      "design": "1",
+      "robustness": "2",
+      "tests": "2",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Implementation 2 is more robust and has more thorough tests (invalid types, a rejected call consuming nothing, refill through the client), but it adds a Protocol, threading, float tolerance and clock-backwards handling that the task did not require. Implementation 1 is simpler, meets the spec, and has clean, adequate tests, so it is easier to merge and maintain."
+    },
+    {
+      "pair": 3,
+      "readability": "1",
+      "design": "1",
+      "robustness": "2",
+      "tests": "1",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "high",
+      "reason": "Implementation 1 is minimal, correct and well tested. Implementation 2 adds no tests and over-engineers the solution (OverflowError handling, duck-type checks on bucket and client, a lock, tolerance), even though its input validation is stricter."
+    }
+  ]
+}

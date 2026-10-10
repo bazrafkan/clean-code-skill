@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "tie",
+      "design": "tie",
+      "robustness": "1",
+      "tests": "1",
+      "scope": "tie",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Implementation 1 checks absolute zero in the source unit, as the spec says, and guards against non-string units, while Implementation 2 converts to Celsius first and depends on float rounding landing exactly on the boundary. Implementation 1's tests are also broader, covering every target unit at the boundary plus None and multi-letter units."
+    },
+    {
+      "pair": 2,
+      "readability": "tie",
+      "design": "2",
+      "robustness": "1",
+      "tests": "2",
+      "scope": "tie",
+      "overall": "2",
+      "confidence": "medium",
+      "reason": "Implementation 1 is solid code (source-unit check, same-unit shortcut, type guard) but adds no tests at all. Implementation 2's data-driven linear-scale table is clean and comes with relevant tests, though its lack of a same-unit shortcut can add small round-trip float error."
+    },
+    {
+      "pair": 3,
+      "readability": "tie",
+      "design": "tie",
+      "robustness": "1",
+      "tests": "1",
+      "scope": "tie",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Implementation 1 keeps exact values with a same-unit shortcut and direct formulas (-459.67 F gives exactly 0.0 K, and a test checks it), while Implementation 2 round-trips same-unit conversions through Celsius, which can drift. Implementation 1's tests are also more thorough (exact float type, None, K-to-K below zero), though it exposes ABSOLUTE_ZERO as a public name."
+    }
+  ]
+}

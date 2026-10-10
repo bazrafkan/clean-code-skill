@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "1",
+      "design": "tie",
+      "robustness": "tie",
+      "tests": "tie",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "low",
+      "reason": "Both keep regular and silver arithmetic identical and test gold correctly. Implementation 1 reaches this with two small helpers, while Implementation 2 adds two NamedTuples, a lookup dict and an extra comment, which is more structure than the task needs, though it does remove the duplicated computation."
+    },
+    {
+      "pair": 2,
+      "readability": "tie",
+      "design": "1",
+      "robustness": "tie",
+      "tests": "1",
+      "scope": "2",
+      "overall": "2",
+      "confidence": "low",
+      "reason": "Implementation 1 is a clean tier-table refactor with stronger regression tests, but it rewrites the whole module and quietly drops the silver >100 rule (dead code, so behavior is the same) for a small feature. Implementation 2 adds gold in the existing style with minimal risk and adequate tests, at the cost of duplicating the gold branches."
+    },
+    {
+      "pair": 3,
+      "readability": "tie",
+      "design": "2",
+      "robustness": "tie",
+      "tests": "2",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "low",
+      "reason": "Implementation 1 is the minimal, low-risk change and covers gold plus regular and silver describe in its tests, though its test file has a mid-file import. Implementation 2 is a well-tested but heavier dataclass refactor, with an extra _line_amount helper, that goes beyond what the task asks."
+    }
+  ]
+}

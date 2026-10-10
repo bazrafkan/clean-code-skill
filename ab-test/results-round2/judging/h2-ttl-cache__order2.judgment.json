@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "1",
+      "design": "tie",
+      "robustness": "tie",
+      "tests": "tie",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "low",
+      "reason": "Both are correct and close to each other. Impl 1 is easier to read because its named _Entry fields and side-effect-free _live_entry beat Impl 2's tuple indexing and lookups that mutate, and it skips Impl 2's TypeVar/__all__ extras; the two test suites are of similar quality."
+    },
+    {
+      "pair": 2,
+      "readability": "2",
+      "design": "2",
+      "robustness": "tie",
+      "tests": "tie",
+      "scope": "2",
+      "overall": "2",
+      "confidence": "medium",
+      "reason": "Both meet the spec, but Impl 1 adds an isinstance/TypeError guard in memoize that the task doesn't ask for, plus heavier comments and mixed Optional typing. Impl 2 is leaner and its tests are well organized; Impl 1's tests are broader but partly cover that extra behavior."
+    },
+    {
+      "pair": 3,
+      "readability": "2",
+      "design": "2",
+      "robustness": "tie",
+      "tests": "2",
+      "scope": "2",
+      "overall": "2",
+      "confidence": "high",
+      "reason": "Impl 1 adds no tests and is padded with long docstrings, a TypeVar and a memoize TypeError guard the task doesn't need. Impl 2 is a concise, correct implementation with a solid, relevant test suite."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "2",
+      "design": "tie",
+      "robustness": "1",
+      "tests": "tie",
+      "scope": "tie",
+      "overall": "tie",
+      "confidence": "low",
+      "reason": "Both are correct, near-identical LRU+TTL designs; Impl 2 reads a bit cleaner with a named _Entry instead of tuple indexing, while Impl 1's per-function namespace token also prevents collisions with keys set directly on the cache. Test suites are comparably thorough with different minor strengths (keyword order/direct-key collision vs. MRU-expired-before-evict and no-TTL cases)."
+    },
+    {
+      "pair": 2,
+      "readability": "1",
+      "design": "1",
+      "robustness": "2",
+      "tests": "tie",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "low",
+      "reason": "Impl 1 is a compact, readable implementation with well-organized tests; Impl 2 is equally correct and its namespace key is slightly more collision-proof, but it adds an unrequested TypeError check in memoize, mixes annotation styles and has more verbose validation. Impl 2's larger test suite covers extras (exceptions, recursion, the TypeError) without adding much relevant coverage."
+    },
+    {
+      "pair": 3,
+      "readability": "1",
+      "design": "1",
+      "robustness": "tie",
+      "tests": "1",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "high",
+      "reason": "Impl 2 adds no tests at all and carries extra unrequested pieces (TypeError guard, TypeVar typing, heavy docstrings), while Impl 1 is a concise, correct implementation with a solid test suite. Both implementations behave correctly on the specified semantics."
+    }
+  ]
+}

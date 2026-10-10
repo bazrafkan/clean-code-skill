@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "tie",
+      "design": "tie",
+      "robustness": "2",
+      "tests": "2",
+      "scope": "tie",
+      "overall": "2",
+      "confidence": "medium",
+      "reason": "Implementation 1 converts to Celsius before checking absolute zero, so tiny sub-zero source values (e.g. -1e-14 K) get absorbed by rounding and pass, while Implementation 2 checks exactly in the source unit. Implementation 2's tests also cover boundaries across all target units and more invalid-unit inputs."
+    },
+    {
+      "pair": 2,
+      "readability": "tie",
+      "design": "1",
+      "robustness": "2",
+      "tests": "1",
+      "scope": "tie",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Both check absolute zero exactly in the source unit, and Implementation 2 adds a same-unit shortcut, but it adds no tests at all and relies on an implicit fall-through to Kelvin in its if-chains. Implementation 1's data-driven linear-scale table is compact and comes with a relevant test suite."
+    },
+    {
+      "pair": 3,
+      "readability": "tie",
+      "design": "1",
+      "robustness": "tie",
+      "tests": "2",
+      "scope": "tie",
+      "overall": "1",
+      "confidence": "low",
+      "reason": "Both validate exactly in the source unit; Implementation 2's six pairwise formulas repeat the magic constants and expose a public ABSOLUTE_ZERO, while Implementation 1 pivots through Celsius using a named constant. Implementation 2's tests are somewhat broader, but Implementation 1's structure will be easier to maintain."
+    }
+  ]
+}

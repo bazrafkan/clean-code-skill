@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "tie",
+      "design": "1",
+      "robustness": "tie",
+      "tests": "1",
+      "scope": "2",
+      "overall": "1",
+      "confidence": "low",
+      "reason": "Both keep regular and silver behaving exactly as before. Impl 1 puts all the pricing in one _breakdown function, so calc and describe cannot drift apart, and its tests cover more edge cases; Impl 2 is a smaller change but still repeats the item loop and the VAT and total steps, and its _discount helper returns a tuple or None, which is awkward."
+    },
+    {
+      "pair": 2,
+      "readability": "2",
+      "design": "2",
+      "robustness": "tie",
+      "tests": "2",
+      "scope": "1",
+      "overall": "2",
+      "confidence": "medium",
+      "reason": "Impl 1 is the smallest correct change, but it copies the gold branches into both functions, which adds to the duplication already there. Impl 2 replaces this with a small tier table and one shared price breakdown that behaves the same (the silver over-100 rule it drops never changed anything), and it adds much better regression tests for regular and silver."
+    },
+    {
+      "pair": 3,
+      "readability": "1",
+      "design": "1",
+      "robustness": "tie",
+      "tests": "1",
+      "scope": "2",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Impl 1 uses a tier table with one shared pricing function and has thorough characterization tests, including the threshold-crossing and empty-order cases, though its positional _Tier arguments are a little opaque. Impl 2 is minimal and correct but duplicates the gold logic in both functions, and its tests import describe in the middle of the file."
+    }
+  ]
+}

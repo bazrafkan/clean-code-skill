@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "2",
+      "design": "tie",
+      "robustness": "1",
+      "tests": "2",
+      "scope": "2",
+      "overall": "2",
+      "confidence": "medium",
+      "reason": "Implementation 1 is more robust (lock, float tolerance, handling for a clock that goes backwards, bool/NaN rejection), but it adds no tests at all and includes extras the task does not need (public properties, a client TypeError check). Implementation 2 is simpler, meets the spec and has focused tests that cover every required behavior."
+    },
+    {
+      "pair": 2,
+      "readability": "2",
+      "design": "tie",
+      "robustness": "1",
+      "tests": "1",
+      "scope": "2",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Implementation 1 fixes real correctness problems that Implementation 2 has: float drift rejects a token that is due, and a backwards clock removes tokens. Its tests prove these cases, plus concurrency and client-error propagation. The Protocol and clock validation are slight extras, but worth the cost compared with Implementation 2's leaner but weaker version."
+    },
+    {
+      "pair": 3,
+      "readability": "2",
+      "design": "2",
+      "robustness": "1",
+      "tests": "2",
+      "scope": "2",
+      "overall": "2",
+      "confidence": "medium",
+      "reason": "Implementation 1 is more defensive, but it over-engineers the task (OverflowError handling for the rate, duck-type checks on the bucket and client) and adds no tests. Implementation 2 is clean, meets the spec and comes with a relevant test suite, which makes it easier to merge and maintain."
+    }
+  ]
+}

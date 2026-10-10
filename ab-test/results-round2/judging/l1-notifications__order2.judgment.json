@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "2",
+      "design": "2",
+      "robustness": "1",
+      "tests": "1",
+      "scope": "2",
+      "overall": "2",
+      "confidence": "low",
+      "reason": "Implementation 1 copies the channel list, treats empty addresses as missing and has broader tests, but it also skips repeated channels, which the spec does not ask for, and it spreads the code over more modules. Implementation 2 is leaner, matches the spec exactly and is easier to read."
+    },
+    {
+      "pair": 2,
+      "readability": "1",
+      "design": "1",
+      "robustness": "2",
+      "tests": "2",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "low",
+      "reason": "Implementation 2 handles more edge cases (positional placeholders, empty addresses, copying the channel list), but it adds a TypeError on string channel lists that nobody asked for, plus heavy docstrings and an extra module. Implementation 1 is compact, correct and well tested."
+    },
+    {
+      "pair": 3,
+      "readability": "1",
+      "design": "tie",
+      "robustness": "2",
+      "tests": "2",
+      "scope": "1",
+      "overall": "2",
+      "confidence": "low",
+      "reason": "Both are correct and similarly structured. Implementation 2 adds small, useful safeguards (empty addresses count as missing, IndexError from positional placeholders becomes ValueError, the channel list is copied) and its tests cover a bit more, including retries on DeliveryError subclasses, at the cost of a little more code."
+    }
+  ]
+}

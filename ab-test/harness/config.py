@@ -17,10 +17,15 @@ COMPLEXITY = {
     "m2-rate-limiter": "medium",
     "l1-notifications": "large",
     "l2-report-refactor": "large",
+    "h1-scheduler-monthly": "medium",
+    "h2-ttl-cache": "large",
 }
 
+# Holdout tasks: written after round 1, never seen while revising the skill.
+HOLDOUT_PREFIX = "h"
+
 # Files that are never part of the judged or measured code.
-IGNORED_NAMES = {"SUMMARY.md", "__pycache__", ".pytest_cache", ".ruff_cache", ".git"}
+IGNORED_NAMES = {"SUMMARY.md", "__pycache__", ".pytest_cache", ".ruff_cache", ".mypy_cache", ".git"}
 
 RUN_PROMPT = """You are working on a small Python project in the directory {workdir}.
 Work only inside that directory: do not read, list or modify anything outside it{skill_exception}.

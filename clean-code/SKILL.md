@@ -5,59 +5,63 @@ description: Use when implementing features, fixing bugs, refactoring, designing
 
 # Clean Code and Design Patterns
 
-Write code the next reader understands quickly and can change safely. The rules come from two books, adapted to modern languages:
+Write the smallest change that fully solves the task, in code the next reader understands quickly and can change safely. Clean code is how you write that change, not a reason to grow it. The rules come from two books, adapted to modern languages:
 - Robert C. Martin's *Clean Code* (2008). Codes like G5 or N7 point to its Chapter 17.
 - The Gang of Four's *Design Patterns* (1994).
 
 They are heuristics, not laws: if a rule would hurt readability in context, readability wins.
 
-Two files in this skill's folder hold the details. Read them on demand:
-- `references/clean-code-rules.md` has every rule below with its rationale, nuances and an example. Read it when applying a rule is unclear, or when reviewing.
-- `references/design-patterns.md` covers all 23 GoF patterns. Read it before introducing a pattern or when choosing between similar ones.
+Two reference files hold the details. Most tasks don't need them:
+- `references/clean-code-rules.md`: every rule below with rationale and an example. Read it only when applying a rule is genuinely unclear, or for a code review.
+- `references/design-patterns.md`: all 23 GoF patterns. Read it only before introducing a pattern, or when choosing between similar ones.
 
 **Review mode.** When asked to review rather than change code, report findings with their location and a fix, using the checklist. Don't edit unless asked.
 
 ## Precedence
 1. Correct behavior, verified by tests.
-2. The user's instructions and the scope of the task.
+2. The user's instructions and the scope of the task: the smallest change that fully solves it.
 3. The project's conventions: formatter, linter, architecture, existing patterns, language idioms (G11, G24). Apply structural rules fully in new code. In existing code, go only as far as the codebase already goes.
 4. The rules below. For design trade-offs, use Kent Beck's order: passes the tests, then no duplication, then expresses intent, then fewest elements.
 
 ## Workflow
 1. **Before writing.**
    - Read the surrounding code and reuse its vocabulary and helpers.
-   - Find the build, test and lint commands, ideally one command each (E1, E2).
+   - Find how the project builds, tests and lints (E1, E2): its config files, scripts and README.
    - Don't invent unclear requirements: ask, or do the clear part and flag the open question.
+   - Before changing legacy code that has no tests, pin its current behavior with a few tests.
 2. **Make it work.**
    - Take small steps, test first where practical.
-   - New behavior ships with a test that would fail without it.
+   - New behavior and fixed bugs ship with a test that would fail without the change. Keep tests focused on what the task changed.
    - Keep the build green.
-3. **Make it right (mandatory).** "It works" is not done.
-   - Refactor in small, behavior-preserving steps until the code passes the checklist.
+3. **Make it right.** "It works" is not done, but "right" applies to the code you wrote or touched.
+   - Refactor your change in small, behavior-preserving steps until it passes the checklist.
+   - Restructure existing code only when that makes this change simpler, for example when a new variant would otherwise need the same edit in several places.
    - Use parallel change for structural moves. Never remove a public or persisted API without asking.
    - Know why the code is correct (G21).
 4. **Stay in scope.**
-   - Clean only what you touch: rename a local, extract a condition, delete dead code, fix a stale comment.
+   - Handle every case the task states or its domain clearly implies. Add nothing speculative: no extra validation or error cases, thread safety, NaN or type checks, logging, configuration options, constants, abstractions, generic typing or new files beyond what the change needs. If you think one is needed, say so in your report instead.
+   - Small cleanups only in lines you touch: rename a local, extract a condition, delete dead code, fix a stale comment.
    - No unrelated refactors, mass reformatting or public renames. Report them instead.
-   - If every new variant needs the same edit in many places, restructure first, within the task's footprint.
 5. **Verify.**
-   - Run the tests, linter, formatter and type checker. Report what you couldn't run.
+   - Run the project's tests and the checks it already configures (linter, formatter, type checker). Don't install or run tools the project doesn't use. Report what you couldn't run.
    - Never weaken, skip or delete tests, or silence warnings, to get green (G4).
+   - Leave nothing generated behind: caches, build output, scratch scripts.
 
 ## Done checklist
+- [ ] The diff is the smallest that fully solves the task: nothing unrequested, and cleanups only in touched lines.
 - [ ] Names reveal intent, match the codebase's vocabulary, and show side effects and mutation.
 - [ ] Each function does one thing at one level of abstraction.
 - [ ] Functions have shallow nesting, few arguments, no flag or output arguments, and no hidden side effects.
-- [ ] There is no duplicated knowledge and no repeated switch on the same type code. Magic values are named (G25).
+- [ ] There is no duplicated knowledge and no repeated switch on the same type code. Magic values whose meaning isn't obvious are named (G25).
 - [ ] Code sits where a reader expects it: high cohesion, minimal public surface, vendor types at the edge, construction separate from use.
 - [ ] Errors can't be silently ignored, carry context, and follow the language's idiom.
 - [ ] There are no implicit nulls, and money is handled precisely.
 - [ ] Comments say only why, warnings or contracts.
 - [ ] There is no commented-out code, dead code, unused import, debug print or edit narration (G9, G12).
 - [ ] Any pattern solves a present need, in the lightest form the language allows, and its role shows in names.
-- [ ] New behavior, boundaries and fixed bugs are tested.
+- [ ] New behavior, boundaries and fixed bugs are tested, and changed legacy behavior is pinned by tests.
 - [ ] Tests are fast, independent and deterministic, and the suite passes.
-- [ ] The diff holds only the task plus small cleanups in touched code.
+- [ ] No caches, build output or scratch files are left in the project.
 
 ## Core rules
 
@@ -105,8 +109,8 @@ Two files in this skill's folder hold the details. Read them on demand:
 - Give context and chain the cause. Keep secrets out of messages.
 - Define error types by how callers handle them. Translate vendor errors at the boundary.
 - No null for "nothing": return an empty collection or a Special Case, or make it explicit with `Option`/`T?`.
-- Validate at trust boundaries. Never swallow errors.
-- Be precise (G26): no floats for money, don't assume a query returns one result, handle concurrent updates.
+- Validate where the task asks and at real trust boundaries. Never swallow errors.
+- Be precise (G26): no floats for money, don't assume a query returns one result, handle concurrent updates where concurrency exists.
 
 **Boundaries.**
 - Keep vendor and SDK types at the edge, behind a narrow domain interface. Do this in new code, or where the codebase already does.
@@ -138,9 +142,9 @@ Two files in this skill's folder hold the details. Read them on demand:
 **Duplication and simplicity.**
 - Duplication means duplicated knowledge (G5).
 - Rule of three: tolerate two copies and extract on the third, or immediately if they encode the same rule. A wrong abstraction costs more than duplication.
-- YAGNI.
+- YAGNI: fewer classes, layers and options beat flexibility nobody asked for.
 
-**Concurrency.**
+**Concurrency (when the code is concurrent).**
 - Keep concurrency separate from logic, and get the single-threaded logic right first.
 - Minimize shared mutable state (immutability, confinement, messages). Use the platform's primitives.
 - Check-then-act is a race, also across an `await`.
@@ -197,7 +201,7 @@ Two files in this skill's folder hold the details. Read them on demand:
 ## Reporting back
 When you finish, mention briefly:
 - cleanups beyond the request
-- trade-offs, such as rules you deliberately didn't apply
+- extras you considered but left out (validation, robustness, refactors), and why
 - patterns you introduced, and why
 - checks you couldn't run
 - smells outside the task's scope that you left alone

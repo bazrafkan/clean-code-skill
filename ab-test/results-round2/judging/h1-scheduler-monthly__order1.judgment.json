@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "2",
+      "design": "2",
+      "robustness": "tie",
+      "tests": "2",
+      "scope": "tie",
+      "overall": "2",
+      "confidence": "medium",
+      "reason": "Both are correct. Implementation 2 has cleaner helper signatures, with a named _first_day_of_next_month instead of an awkward (now, year, month, job) helper, and its describe matches the existing string-concatenation style. Its parametrized tests also guard the daily and weekly behavior the task requires to stay unchanged."
+    },
+    {
+      "pair": 2,
+      "readability": "1",
+      "design": "tie",
+      "robustness": "tie",
+      "tests": "2",
+      "scope": "tie",
+      "overall": "2",
+      "confidence": "low",
+      "reason": "Implementation 1 rolls over the month explicitly, which is easier to read than Implementation 2's commented trick of adding 31 days to the 1st. Implementation 2's tests are better organized and parametrized, and they also cover daily, weekly and unknown-kind behavior, which tips it slightly."
+    },
+    {
+      "pair": 3,
+      "readability": "2",
+      "design": "2",
+      "robustness": "tie",
+      "tests": "2",
+      "scope": "2",
+      "overall": "2",
+      "confidence": "medium",
+      "reason": "Implementation 1 adds an unrequested, untested day-range ValueError inside next_run, which does not match how the function handles other fields. Implementation 2 keeps next_run's logic in small, clearly named helpers and has broader parametrized tests, including tests that check daily and weekly behavior is unchanged."
+    }
+  ]
+}
