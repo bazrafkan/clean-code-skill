@@ -1,0 +1,1560 @@
+{
+  "metrics": {
+    "l1-notifications": {
+      "hidden_pass_rate": {
+        "with_skill": [
+          1.0,
+          0.0
+        ],
+        "without_skill": [
+          1.0,
+          0.0
+        ]
+      },
+      "own_tests_collected": {
+        "with_skill": [
+          34.333333333333336,
+          1.5275252316519468
+        ],
+        "without_skill": [
+          31.0,
+          8.717797887081348
+        ]
+      },
+      "prod_sloc": {
+        "with_skill": [
+          163.33333333333334,
+          3.2145502536643185
+        ],
+        "without_skill": [
+          159.33333333333334,
+          16.921386861996073
+        ]
+      },
+      "test_sloc": {
+        "with_skill": [
+          251.33333333333334,
+          25.166114784235834
+        ],
+        "without_skill": [
+          190.0,
+          38.43175770115127
+        ]
+      },
+      "classes": {
+        "with_skill": [
+          8.666666666666666,
+          0.5773502691896257
+        ],
+        "without_skill": [
+          6.333333333333333,
+          0.5773502691896257
+        ]
+      },
+      "max_function_lines": {
+        "with_skill": [
+          20.333333333333332,
+          0.5773502691896257
+        ],
+        "without_skill": [
+          27.0,
+          4.0
+        ]
+      },
+      "max_complexity": {
+        "with_skill": [
+          4.0,
+          0.0
+        ],
+        "without_skill": [
+          5.333333333333333,
+          0.5773502691896257
+        ]
+      },
+      "mean_complexity": {
+        "with_skill": [
+          2.08,
+          0.09848857801796104
+        ],
+        "without_skill": [
+          2.4166666666666665,
+          0.220302821891444
+        ]
+      },
+      "max_params": {
+        "with_skill": [
+          5.0,
+          0.0
+        ],
+        "without_skill": [
+          4.0,
+          1.0
+        ]
+      },
+      "ruff_findings": {
+        "with_skill": [
+          0.0,
+          0.0
+        ],
+        "without_skill": [
+          0.0,
+          0.0
+        ]
+      },
+      "diff_lines": {
+        "with_skill": [
+          581.0,
+          25.534290669607408
+        ],
+        "without_skill": [
+          505.6666666666667,
+          71.44461724534139
+        ]
+      },
+      "tokens": {
+        "with_skill": [
+          139866.0,
+          2214.642860598521
+        ],
+        "without_skill": [
+          92453.0,
+          4330.2850945405435
+        ]
+      },
+      "duration_s": {
+        "with_skill": [
+          442.2473333333333,
+          28.122116782584737
+        ],
+        "without_skill": [
+          168.702,
+          38.321933941282246
+        ]
+      },
+      "tool_uses": {
+        "with_skill": [
+          36.333333333333336,
+          2.8867513459481287
+        ],
+        "without_skill": [
+          19.333333333333332,
+          5.507570547286102
+        ]
+      }
+    },
+    "l2-report-refactor": {
+      "hidden_pass_rate": {
+        "with_skill": [
+          1.0,
+          0.0
+        ],
+        "without_skill": [
+          1.0,
+          0.0
+        ]
+      },
+      "own_tests_collected": {
+        "with_skill": [
+          13.0,
+          1.7320508075688772
+        ],
+        "without_skill": [
+          8.0,
+          2.6457513110645907
+        ]
+      },
+      "prod_sloc": {
+        "with_skill": [
+          202.66666666666666,
+          7.094598884597588
+        ],
+        "without_skill": [
+          146.0,
+          15.716233645501712
+        ]
+      },
+      "test_sloc": {
+        "with_skill": [
+          148.66666666666666,
+          7.023769168568492
+        ],
+        "without_skill": [
+          79.66666666666667,
+          9.073771725877465
+        ]
+      },
+      "classes": {
+        "with_skill": [
+          4.666666666666667,
+          0.5773502691896257
+        ],
+        "without_skill": [
+          3.3333333333333335,
+          0.5773502691896257
+        ]
+      },
+      "max_function_lines": {
+        "with_skill": [
+          19.666666666666668,
+          4.041451884327381
+        ],
+        "without_skill": [
+          25.333333333333332,
+          1.1547005383792515
+        ]
+      },
+      "max_complexity": {
+        "with_skill": [
+          5.0,
+          1.7320508075688772
+        ],
+        "without_skill": [
+          4.666666666666667,
+          0.5773502691896257
+        ]
+      },
+      "mean_complexity": {
+        "with_skill": [
+          1.8233333333333333,
+          0.11930353445448852
+        ],
+        "without_skill": [
+          1.9266666666666667,
+          0.12701705922171766
+        ]
+      },
+      "max_params": {
+        "with_skill": [
+          2.6666666666666665,
+          0.5773502691896257
+        ],
+        "without_skill": [
+          3.0,
+          0.0
+        ]
+      },
+      "ruff_findings": {
+        "with_skill": [
+          0.0,
+          0.0
+        ],
+        "without_skill": [
+          0.6666666666666666,
+          0.5773502691896257
+        ]
+      },
+      "diff_lines": {
+        "with_skill": [
+          542.0,
+          9.539392014169456
+        ],
+        "without_skill": [
+          378.0,
+          29.0516780926679
+        ]
+      },
+      "tokens": {
+        "with_skill": [
+          167904.33333333334,
+          19071.714824140312
+        ],
+        "without_skill": [
+          107060.0,
+          8750.284395378243
+        ]
+      },
+      "duration_s": {
+        "with_skill": [
+          648.4753333333333,
+          110.71396937303501
+        ],
+        "without_skill": [
+          334.07800000000003,
+          126.05955197445373
+        ]
+      },
+      "tool_uses": {
+        "with_skill": [
+          37.0,
+          6.082762530298219
+        ],
+        "without_skill": [
+          14.333333333333334,
+          3.2145502536643185
+        ]
+      }
+    },
+    "m1-pricing-gold-tier": {
+      "hidden_pass_rate": {
+        "with_skill": [
+          1.0,
+          0.0
+        ],
+        "without_skill": [
+          1.0,
+          0.0
+        ]
+      },
+      "own_tests_collected": {
+        "with_skill": [
+          14.333333333333334,
+          2.516611478423583
+        ],
+        "without_skill": [
+          6.333333333333333,
+          1.5275252316519468
+        ]
+      },
+      "prod_sloc": {
+        "with_skill": [
+          77.0,
+          9.16515138991168
+        ],
+        "without_skill": [
+          63.0,
+          5.291502622129181
+        ]
+      },
+      "test_sloc": {
+        "with_skill": [
+          64.0,
+          4.0
+        ],
+        "without_skill": [
+          29.333333333333332,
+          4.725815626252609
+        ]
+      },
+      "classes": {
+        "with_skill": [
+          2.0,
+          0.0
+        ],
+        "without_skill": [
+          0.6666666666666666,
+          1.1547005383792515
+        ]
+      },
+      "max_function_lines": {
+        "with_skill": [
+          12.0,
+          1.7320508075688772
+        ],
+        "without_skill": [
+          18.0,
+          5.5677643628300215
+        ]
+      },
+      "max_complexity": {
+        "with_skill": [
+          3.3333333333333335,
+          0.5773502691896257
+        ],
+        "without_skill": [
+          5.666666666666667,
+          0.5773502691896257
+        ]
+      },
+      "mean_complexity": {
+        "with_skill": [
+          1.6366666666666667,
+          0.055075705472860954
+        ],
+        "without_skill": [
+          2.466666666666667,
+          0.5507570547286103
+        ]
+      },
+      "max_params": {
+        "with_skill": [
+          3.0,
+          0.0
+        ],
+        "without_skill": [
+          3.0,
+          0.0
+        ]
+      },
+      "ruff_findings": {
+        "with_skill": [
+          0.0,
+          0.0
+        ],
+        "without_skill": [
+          0.0,
+          0.0
+        ]
+      },
+      "diff_lines": {
+        "with_skill": [
+          225.33333333333334,
+          8.32666399786453
+        ],
+        "without_skill": [
+          144.66666666666666,
+          19.39931270260195
+        ]
+      },
+      "tokens": {
+        "with_skill": [
+          125449.33333333333,
+          3955.7454838921744
+        ],
+        "without_skill": [
+          86686.66666666667,
+          1537.0069399105955
+        ]
+      },
+      "duration_s": {
+        "with_skill": [
+          467.96033333333327,
+          43.70132634524191
+        ],
+        "without_skill": [
+          146.99866666666665,
+          36.92559421774189
+        ]
+      },
+      "tool_uses": {
+        "with_skill": [
+          26.666666666666668,
+          3.2145502536643185
+        ],
+        "without_skill": [
+          11.333333333333334,
+          1.1547005383792515
+        ]
+      }
+    },
+    "m2-rate-limiter": {
+      "hidden_pass_rate": {
+        "with_skill": [
+          1.0,
+          0.0
+        ],
+        "without_skill": [
+          1.0,
+          0.0
+        ]
+      },
+      "own_tests_collected": {
+        "with_skill": [
+          33.333333333333336,
+          1.5275252316519468
+        ],
+        "without_skill": [
+          25.666666666666668,
+          22.368132093076824
+        ]
+      },
+      "prod_sloc": {
+        "with_skill": [
+          83.33333333333333,
+          7.505553499465135
+        ],
+        "without_skill": [
+          69.0,
+          8.660254037844387
+        ]
+      },
+      "test_sloc": {
+        "with_skill": [
+          125.66666666666667,
+          4.725815626252609
+        ],
+        "without_skill": [
+          92.66666666666667,
+          80.47566920090402
+        ]
+      },
+      "classes": {
+        "with_skill": [
+          4.0,
+          0.0
+        ],
+        "without_skill": [
+          3.3333333333333335,
+          0.5773502691896257
+        ]
+      },
+      "max_function_lines": {
+        "with_skill": [
+          21.666666666666668,
+          5.033222956847166
+        ],
+        "without_skill": [
+          18.0,
+          1.0
+        ]
+      },
+      "max_complexity": {
+        "with_skill": [
+          5.0,
+          1.7320508075688772
+        ],
+        "without_skill": [
+          6.666666666666667,
+          1.5275252316519468
+        ]
+      },
+      "mean_complexity": {
+        "with_skill": [
+          2.2333333333333334,
+          0.08621678104251704
+        ],
+        "without_skill": [
+          2.69,
+          0.2455605831561735
+        ]
+      },
+      "max_params": {
+        "with_skill": [
+          3.0,
+          0.0
+        ],
+        "without_skill": [
+          3.0,
+          0.0
+        ]
+      },
+      "ruff_findings": {
+        "with_skill": [
+          1.0,
+          0.0
+        ],
+        "without_skill": [
+          1.0,
+          0.0
+        ]
+      },
+      "diff_lines": {
+        "with_skill": [
+          298.6666666666667,
+          10.214368964029708
+        ],
+        "without_skill": [
+          235.0,
+          127.18883598806933
+        ]
+      },
+      "tokens": {
+        "with_skill": [
+          127188.0,
+          17649.440869330676
+        ],
+        "without_skill": [
+          84734.0,
+          890.6924272721757
+        ]
+      },
+      "duration_s": {
+        "with_skill": [
+          399.98966666666666,
+          164.86012228654127
+        ],
+        "without_skill": [
+          112.08133333333335,
+          5.116704538404902
+        ]
+      },
+      "tool_uses": {
+        "with_skill": [
+          25.666666666666668,
+          8.082903768654761
+        ],
+        "without_skill": [
+          8.333333333333334,
+          2.0816659994661326
+        ]
+      }
+    },
+    "s1-pagination-bugfix": {
+      "hidden_pass_rate": {
+        "with_skill": [
+          1.0,
+          0.0
+        ],
+        "without_skill": [
+          1.0,
+          0.0
+        ]
+      },
+      "own_tests_collected": {
+        "with_skill": [
+          16.666666666666668,
+          1.1547005383792515
+        ],
+        "without_skill": [
+          19.0,
+          3.4641016151377544
+        ]
+      },
+      "prod_sloc": {
+        "with_skill": [
+          24.333333333333332,
+          1.5275252316519468
+        ],
+        "without_skill": [
+          22.666666666666668,
+          0.5773502691896257
+        ]
+      },
+      "test_sloc": {
+        "with_skill": [
+          38.0,
+          3.4641016151377544
+        ],
+        "without_skill": [
+          42.333333333333336,
+          1.5275252316519468
+        ]
+      },
+      "classes": {
+        "with_skill": [
+          0.0,
+          0.0
+        ],
+        "without_skill": [
+          0.0,
+          0.0
+        ]
+      },
+      "max_function_lines": {
+        "with_skill": [
+          11.666666666666666,
+          1.1547005383792515
+        ],
+        "without_skill": [
+          12.333333333333334,
+          0.5773502691896257
+        ]
+      },
+      "max_complexity": {
+        "with_skill": [
+          3.0,
+          0.0
+        ],
+        "without_skill": [
+          2.3333333333333335,
+          0.5773502691896257
+        ]
+      },
+      "mean_complexity": {
+        "with_skill": [
+          2.22,
+          0.19052558883257653
+        ],
+        "without_skill": [
+          2.3333333333333335,
+          0.5773502691896257
+        ]
+      },
+      "max_params": {
+        "with_skill": [
+          3.0,
+          0.0
+        ],
+        "without_skill": [
+          3.0,
+          0.0
+        ]
+      },
+      "ruff_findings": {
+        "with_skill": [
+          0.0,
+          0.0
+        ],
+        "without_skill": [
+          0.0,
+          0.0
+        ]
+      },
+      "diff_lines": {
+        "with_skill": [
+          100.66666666666667,
+          13.576941236277534
+        ],
+        "without_skill": [
+          95.33333333333333,
+          0.5773502691896257
+        ]
+      },
+      "tokens": {
+        "with_skill": [
+          90871.0,
+          6678.966312237246
+        ],
+        "without_skill": [
+          76553.0,
+          112.50333328395207
+        ]
+      },
+      "duration_s": {
+        "with_skill": [
+          89.65899999999999,
+          10.142851127764821
+        ],
+        "without_skill": [
+          81.649,
+          75.6559932787879
+        ]
+      },
+      "tool_uses": {
+        "with_skill": [
+          14.333333333333334,
+          0.5773502691896257
+        ],
+        "without_skill": [
+          7.0,
+          0.0
+        ]
+      }
+    },
+    "s2-temperature-trap": {
+      "hidden_pass_rate": {
+        "with_skill": [
+          1.0,
+          0.0
+        ],
+        "without_skill": [
+          1.0,
+          0.0
+        ]
+      },
+      "own_tests_collected": {
+        "with_skill": [
+          29.666666666666668,
+          6.110100926607787
+        ],
+        "without_skill": [
+          27.333333333333332,
+          1.5275252316519468
+        ]
+      },
+      "prod_sloc": {
+        "with_skill": [
+          46.0,
+          2.6457513110645907
+        ],
+        "without_skill": [
+          37.0,
+          6.082762530298219
+        ]
+      },
+      "test_sloc": {
+        "with_skill": [
+          51.666666666666664,
+          6.6583281184793925
+        ],
+        "without_skill": [
+          41.0,
+          3.4641016151377544
+        ]
+      },
+      "classes": {
+        "with_skill": [
+          1.0,
+          0.0
+        ],
+        "without_skill": [
+          0.3333333333333333,
+          0.5773502691896257
+        ]
+      },
+      "max_function_lines": {
+        "with_skill": [
+          16.333333333333332,
+          1.5275252316519468
+        ],
+        "without_skill": [
+          21.0,
+          4.358898943540674
+        ]
+      },
+      "max_complexity": {
+        "with_skill": [
+          2.6666666666666665,
+          0.5773502691896257
+        ],
+        "without_skill": [
+          2.6666666666666665,
+          0.5773502691896257
+        ]
+      },
+      "mean_complexity": {
+        "with_skill": [
+          2.11,
+          0.38105117766515306
+        ],
+        "without_skill": [
+          2.4433333333333334,
+          0.5095422782589619
+        ]
+      },
+      "max_params": {
+        "with_skill": [
+          3.0,
+          0.0
+        ],
+        "without_skill": [
+          3.0,
+          0.0
+        ]
+      },
+      "ruff_findings": {
+        "with_skill": [
+          0.0,
+          0.0
+        ],
+        "without_skill": [
+          0.0,
+          0.0
+        ]
+      },
+      "diff_lines": {
+        "with_skill": [
+          133.0,
+          9.539392014169456
+        ],
+        "without_skill": [
+          105.0,
+          7.937253933193772
+        ]
+      },
+      "tokens": {
+        "with_skill": [
+          106800.0,
+          5388.558155944872
+        ],
+        "without_skill": [
+          79846.66666666667,
+          1819.0152097586576
+        ]
+      },
+      "duration_s": {
+        "with_skill": [
+          445.96866666666665,
+          415.07098341649146
+        ],
+        "without_skill": [
+          82.50166666666667,
+          22.795339355520316
+        ]
+      },
+      "tool_uses": {
+        "with_skill": [
+          16.0,
+          1.7320508075688772
+        ],
+        "without_skill": [
+          8.666666666666666,
+          1.5275252316519468
+        ]
+      }
+    },
+    "ALL": {
+      "hidden_pass_rate": {
+        "with_skill": [
+          1.0,
+          0.0
+        ],
+        "without_skill": [
+          1.0,
+          0.0
+        ]
+      },
+      "own_tests_collected": {
+        "with_skill": [
+          23.555555555555557,
+          9.65415011169212
+        ],
+        "without_skill": [
+          19.555555555555557,
+          12.862266849071824
+        ]
+      },
+      "prod_sloc": {
+        "with_skill": [
+          99.44444444444444,
+          65.26617196231429
+        ],
+        "without_skill": [
+          82.83333333333333,
+          54.118877863241686
+        ]
+      },
+      "test_sloc": {
+        "with_skill": [
+          113.22222222222223,
+          76.1666559402747
+        ],
+        "without_skill": [
+          79.16666666666667,
+          63.909172682340184
+        ]
+      },
+      "classes": {
+        "with_skill": [
+          3.388888888888889,
+          2.953340857778225
+        ],
+        "without_skill": [
+          2.3333333333333335,
+          2.3763541031440183
+        ]
+      },
+      "max_function_lines": {
+        "with_skill": [
+          16.944444444444443,
+          4.721318637118513
+        ],
+        "without_skill": [
+          20.27777777777778,
+          5.798636305764998
+        ]
+      },
+      "max_complexity": {
+        "with_skill": [
+          3.8333333333333335,
+          1.2947859237091257
+        ],
+        "without_skill": [
+          4.555555555555555,
+          1.756407504043819
+        ]
+      },
+      "mean_complexity": {
+        "with_skill": [
+          2.0172222222222222,
+          0.2744150046393999
+        ],
+        "without_skill": [
+          2.3794444444444443,
+          0.4195582021213746
+        ]
+      },
+      "max_params": {
+        "with_skill": [
+          3.2777777777777777,
+          0.8264420947336313
+        ],
+        "without_skill": [
+          3.1666666666666665,
+          0.5144957554275265
+        ]
+      },
+      "ruff_findings": {
+        "with_skill": [
+          0.16666666666666666,
+          0.3834824944236852
+        ],
+        "without_skill": [
+          0.2777777777777778,
+          0.4608885989624768
+        ]
+      },
+      "diff_lines": {
+        "with_skill": [
+          313.44444444444446,
+          192.70587836274106
+        ],
+        "without_skill": [
+          243.94444444444446,
+          164.23063847643985
+        ]
+      },
+      "tokens": {
+        "with_skill": [
+          126346.44444444444,
+          26783.03031930792
+        ],
+        "without_skill": [
+          87888.88888888889,
+          10798.733726904056
+        ]
+      },
+      "duration_s": {
+        "with_skill": [
+          415.7167222222222,
+          233.17574737316903
+        ],
+        "without_skill": [
+          154.33511111111113,
+          104.14207948865925
+        ]
+      },
+      "tool_uses": {
+        "with_skill": [
+          26.0,
+          9.827931384280093
+        ],
+        "without_skill": [
+          11.5,
+          4.973458969132756
+        ]
+      }
+    }
+  },
+  "wins": {
+    "ALL": {
+      "overall": {
+        "pairs": 18,
+        "with_skill_wins": 6,
+        "without_skill_wins": 8,
+        "ties_or_inconsistent": 4,
+        "lean_with": 0,
+        "lean_without": 0,
+        "inconsistent": 3,
+        "win_share_decisive": 0.42857142857142855,
+        "wilson95": [
+          0.21380509930400526,
+          0.6740973309713064
+        ],
+        "sign_test_p": 0.79052734375
+      },
+      "readability": {
+        "pairs": 18,
+        "with_skill_wins": 3,
+        "without_skill_wins": 4,
+        "ties_or_inconsistent": 11,
+        "lean_with": 3,
+        "lean_without": 1,
+        "inconsistent": 0,
+        "win_share_decisive": 0.42857142857142855,
+        "wilson95": [
+          0.15821692226262685,
+          0.7495457695909742
+        ],
+        "sign_test_p": 1.0
+      },
+      "design": {
+        "pairs": 18,
+        "with_skill_wins": 1,
+        "without_skill_wins": 5,
+        "ties_or_inconsistent": 12,
+        "lean_with": 3,
+        "lean_without": 2,
+        "inconsistent": 1,
+        "win_share_decisive": 0.16666666666666666,
+        "wilson95": [
+          0.03005258587173032,
+          0.563509436563646
+        ],
+        "sign_test_p": 0.21875
+      },
+      "robustness": {
+        "pairs": 18,
+        "with_skill_wins": 4,
+        "without_skill_wins": 6,
+        "ties_or_inconsistent": 8,
+        "lean_with": 0,
+        "lean_without": 0,
+        "inconsistent": 0,
+        "win_share_decisive": 0.4,
+        "wilson95": [
+          0.16817758120350967,
+          0.6873304525498135
+        ],
+        "sign_test_p": 0.75390625
+      },
+      "tests": {
+        "pairs": 18,
+        "with_skill_wins": 7,
+        "without_skill_wins": 2,
+        "ties_or_inconsistent": 9,
+        "lean_with": 2,
+        "lean_without": 2,
+        "inconsistent": 0,
+        "win_share_decisive": 0.7777777777777778,
+        "wilson95": [
+          0.4525833436728054,
+          0.9367762376877727
+        ],
+        "sign_test_p": 0.1796875
+      },
+      "scope": {
+        "pairs": 18,
+        "with_skill_wins": 0,
+        "without_skill_wins": 11,
+        "ties_or_inconsistent": 7,
+        "lean_with": 0,
+        "lean_without": 2,
+        "inconsistent": 0,
+        "win_share_decisive": 0.0,
+        "wilson95": [
+          2.7755575615628914e-17,
+          0.2588400172488141
+        ],
+        "sign_test_p": 0.0009765625
+      }
+    },
+    "small": {
+      "overall": {
+        "pairs": 6,
+        "with_skill_wins": 2,
+        "without_skill_wins": 3,
+        "ties_or_inconsistent": 1,
+        "lean_with": 0,
+        "lean_without": 0,
+        "inconsistent": 0,
+        "win_share_decisive": 0.4,
+        "wilson95": [
+          0.1176182311592533,
+          0.769280067791163
+        ],
+        "sign_test_p": 1.0
+      }
+    },
+    "medium": {
+      "overall": {
+        "pairs": 6,
+        "with_skill_wins": 3,
+        "without_skill_wins": 2,
+        "ties_or_inconsistent": 1,
+        "lean_with": 0,
+        "lean_without": 0,
+        "inconsistent": 1,
+        "win_share_decisive": 0.6,
+        "wilson95": [
+          0.23071993220883708,
+          0.8823817688407467
+        ],
+        "sign_test_p": 1.0
+      }
+    },
+    "large": {
+      "overall": {
+        "pairs": 6,
+        "with_skill_wins": 1,
+        "without_skill_wins": 3,
+        "ties_or_inconsistent": 2,
+        "lean_with": 0,
+        "lean_without": 0,
+        "inconsistent": 2,
+        "win_share_decisive": 0.25,
+        "wilson95": [
+          0.045586062644636216,
+          0.6993639475573634
+        ],
+        "sign_test_p": 0.625
+      }
+    }
+  },
+  "wins_by_task": {
+    "l1-notifications": {
+      "pairs": 3,
+      "with_skill_wins": 0,
+      "without_skill_wins": 3,
+      "ties_or_inconsistent": 0,
+      "lean_with": 0,
+      "lean_without": 0,
+      "inconsistent": 0,
+      "win_share_decisive": 0.0,
+      "wilson95": [
+        0.0,
+        0.5615060804490177
+      ],
+      "sign_test_p": 0.25
+    },
+    "l2-report-refactor": {
+      "pairs": 3,
+      "with_skill_wins": 1,
+      "without_skill_wins": 0,
+      "ties_or_inconsistent": 2,
+      "lean_with": 0,
+      "lean_without": 0,
+      "inconsistent": 2,
+      "win_share_decisive": 1.0,
+      "wilson95": [
+        0.20654329147389294,
+        1.0
+      ],
+      "sign_test_p": 1.0
+    },
+    "m1-pricing-gold-tier": {
+      "pairs": 3,
+      "with_skill_wins": 2,
+      "without_skill_wins": 0,
+      "ties_or_inconsistent": 1,
+      "lean_with": 0,
+      "lean_without": 0,
+      "inconsistent": 1,
+      "win_share_decisive": 1.0,
+      "wilson95": [
+        0.34237195288961925,
+        1.0
+      ],
+      "sign_test_p": 0.5
+    },
+    "m2-rate-limiter": {
+      "pairs": 3,
+      "with_skill_wins": 1,
+      "without_skill_wins": 2,
+      "ties_or_inconsistent": 0,
+      "lean_with": 0,
+      "lean_without": 0,
+      "inconsistent": 0,
+      "win_share_decisive": 0.3333333333333333,
+      "wilson95": [
+        0.0614903152761605,
+        0.7923450448735121
+      ],
+      "sign_test_p": 1.0
+    },
+    "s1-pagination-bugfix": {
+      "pairs": 3,
+      "with_skill_wins": 0,
+      "without_skill_wins": 2,
+      "ties_or_inconsistent": 1,
+      "lean_with": 0,
+      "lean_without": 0,
+      "inconsistent": 0,
+      "win_share_decisive": 0.0,
+      "wilson95": [
+        0.0,
+        0.6576280471103807
+      ],
+      "sign_test_p": 0.5
+    },
+    "s2-temperature-trap": {
+      "pairs": 3,
+      "with_skill_wins": 2,
+      "without_skill_wins": 1,
+      "ties_or_inconsistent": 0,
+      "lean_with": 0,
+      "lean_without": 0,
+      "inconsistent": 0,
+      "win_share_decisive": 0.6666666666666666,
+      "wilson95": [
+        0.2076549551264879,
+        0.9385096847238394
+      ],
+      "sign_test_p": 1.0
+    }
+  },
+  "raw_judgments": {
+    "overall": {
+      "with_skill": 15,
+      "without_skill": 19,
+      "tie": 2
+    },
+    "readability": {
+      "with_skill": 9,
+      "without_skill": 9,
+      "tie": 18
+    },
+    "design": {
+      "with_skill": 6,
+      "without_skill": 13,
+      "tie": 17
+    },
+    "robustness": {
+      "with_skill": 8,
+      "without_skill": 12,
+      "tie": 16
+    },
+    "tests": {
+      "with_skill": 16,
+      "without_skill": 6,
+      "tie": 14
+    },
+    "scope": {
+      "with_skill": 0,
+      "without_skill": 24,
+      "tie": 12
+    }
+  },
+  "pair_verdicts": {
+    "l1-notifications/r1/overall": "without_skill",
+    "l1-notifications/r1/readability": "lean_without_skill",
+    "l1-notifications/r1/design": "without_skill",
+    "l1-notifications/r1/robustness": "without_skill",
+    "l1-notifications/r1/tests": "tie",
+    "l1-notifications/r1/scope": "without_skill",
+    "l1-notifications/r2/overall": "without_skill",
+    "l1-notifications/r2/readability": "without_skill",
+    "l1-notifications/r2/design": "without_skill",
+    "l1-notifications/r2/robustness": "without_skill",
+    "l1-notifications/r2/tests": "tie",
+    "l1-notifications/r2/scope": "lean_without_skill",
+    "l1-notifications/r3/overall": "without_skill",
+    "l1-notifications/r3/readability": "tie",
+    "l1-notifications/r3/design": "without_skill",
+    "l1-notifications/r3/robustness": "without_skill",
+    "l1-notifications/r3/tests": "lean_without_skill",
+    "l1-notifications/r3/scope": "without_skill",
+    "l2-report-refactor/r1/overall": "inconsistent",
+    "l2-report-refactor/r1/readability": "without_skill",
+    "l2-report-refactor/r1/design": "inconsistent",
+    "l2-report-refactor/r1/robustness": "with_skill",
+    "l2-report-refactor/r1/tests": "with_skill",
+    "l2-report-refactor/r1/scope": "without_skill",
+    "l2-report-refactor/r2/overall": "with_skill",
+    "l2-report-refactor/r2/readability": "tie",
+    "l2-report-refactor/r2/design": "tie",
+    "l2-report-refactor/r2/robustness": "with_skill",
+    "l2-report-refactor/r2/tests": "with_skill",
+    "l2-report-refactor/r2/scope": "without_skill",
+    "l2-report-refactor/r3/overall": "inconsistent",
+    "l2-report-refactor/r3/readability": "lean_with_skill",
+    "l2-report-refactor/r3/design": "lean_with_skill",
+    "l2-report-refactor/r3/robustness": "tie",
+    "l2-report-refactor/r3/tests": "lean_with_skill",
+    "l2-report-refactor/r3/scope": "lean_without_skill",
+    "m1-pricing-gold-tier/r1/overall": "with_skill",
+    "m1-pricing-gold-tier/r1/readability": "with_skill",
+    "m1-pricing-gold-tier/r1/design": "lean_with_skill",
+    "m1-pricing-gold-tier/r1/robustness": "tie",
+    "m1-pricing-gold-tier/r1/tests": "with_skill",
+    "m1-pricing-gold-tier/r1/scope": "tie",
+    "m1-pricing-gold-tier/r2/overall": "inconsistent",
+    "m1-pricing-gold-tier/r2/readability": "lean_with_skill",
+    "m1-pricing-gold-tier/r2/design": "lean_without_skill",
+    "m1-pricing-gold-tier/r2/robustness": "tie",
+    "m1-pricing-gold-tier/r2/tests": "with_skill",
+    "m1-pricing-gold-tier/r2/scope": "without_skill",
+    "m1-pricing-gold-tier/r3/overall": "with_skill",
+    "m1-pricing-gold-tier/r3/readability": "with_skill",
+    "m1-pricing-gold-tier/r3/design": "with_skill",
+    "m1-pricing-gold-tier/r3/robustness": "tie",
+    "m1-pricing-gold-tier/r3/tests": "with_skill",
+    "m1-pricing-gold-tier/r3/scope": "without_skill",
+    "m2-rate-limiter/r1/overall": "without_skill",
+    "m2-rate-limiter/r1/readability": "tie",
+    "m2-rate-limiter/r1/design": "tie",
+    "m2-rate-limiter/r1/robustness": "without_skill",
+    "m2-rate-limiter/r1/tests": "lean_without_skill",
+    "m2-rate-limiter/r1/scope": "tie",
+    "m2-rate-limiter/r2/overall": "with_skill",
+    "m2-rate-limiter/r2/readability": "tie",
+    "m2-rate-limiter/r2/design": "without_skill",
+    "m2-rate-limiter/r2/robustness": "without_skill",
+    "m2-rate-limiter/r2/tests": "with_skill",
+    "m2-rate-limiter/r2/scope": "without_skill",
+    "m2-rate-limiter/r3/overall": "without_skill",
+    "m2-rate-limiter/r3/readability": "tie",
+    "m2-rate-limiter/r3/design": "tie",
+    "m2-rate-limiter/r3/robustness": "without_skill",
+    "m2-rate-limiter/r3/tests": "without_skill",
+    "m2-rate-limiter/r3/scope": "without_skill",
+    "s1-pagination-bugfix/r1/overall": "without_skill",
+    "s1-pagination-bugfix/r1/readability": "lean_with_skill",
+    "s1-pagination-bugfix/r1/design": "lean_without_skill",
+    "s1-pagination-bugfix/r1/robustness": "tie",
+    "s1-pagination-bugfix/r1/tests": "tie",
+    "s1-pagination-bugfix/r1/scope": "without_skill",
+    "s1-pagination-bugfix/r2/overall": "without_skill",
+    "s1-pagination-bugfix/r2/readability": "tie",
+    "s1-pagination-bugfix/r2/design": "tie",
+    "s1-pagination-bugfix/r2/robustness": "tie",
+    "s1-pagination-bugfix/r2/tests": "tie",
+    "s1-pagination-bugfix/r2/scope": "without_skill",
+    "s1-pagination-bugfix/r3/overall": "tie",
+    "s1-pagination-bugfix/r3/readability": "with_skill",
+    "s1-pagination-bugfix/r3/design": "lean_with_skill",
+    "s1-pagination-bugfix/r3/robustness": "tie",
+    "s1-pagination-bugfix/r3/tests": "without_skill",
+    "s1-pagination-bugfix/r3/scope": "tie",
+    "s2-temperature-trap/r1/overall": "without_skill",
+    "s2-temperature-trap/r1/readability": "without_skill",
+    "s2-temperature-trap/r1/design": "without_skill",
+    "s2-temperature-trap/r1/robustness": "with_skill",
+    "s2-temperature-trap/r1/tests": "lean_with_skill",
+    "s2-temperature-trap/r1/scope": "without_skill",
+    "s2-temperature-trap/r2/overall": "with_skill",
+    "s2-temperature-trap/r2/readability": "without_skill",
+    "s2-temperature-trap/r2/design": "tie",
+    "s2-temperature-trap/r2/robustness": "tie",
+    "s2-temperature-trap/r2/tests": "with_skill",
+    "s2-temperature-trap/r2/scope": "tie",
+    "s2-temperature-trap/r3/overall": "with_skill",
+    "s2-temperature-trap/r3/readability": "tie",
+    "s2-temperature-trap/r3/design": "tie",
+    "s2-temperature-trap/r3/robustness": "with_skill",
+    "s2-temperature-trap/r3/tests": "tie",
+    "s2-temperature-trap/r3/scope": "tie"
+  },
+  "judge_reasons": {
+    "l1-notifications/r1": {
+      "1": [
+        "medium",
+        "Implementation 2 is a simpler design that still covers the spec, and it maps positional-placeholder IndexError to ValueError, which Implementation 1 misses. Implementation 1 adds logging, a _Route abstraction, a Channel enum and an awkward dataclass(init=False) with a hand-written __init__, none of which the task needs."
+      ],
+      "2": [
+        "medium",
+        "Implementation 1 is a direct, minimal loop and also maps positional-placeholder IndexError to ValueError, which Implementation 2 misses. Implementation 2 adds a _Route abstraction, logging and a hand-written dataclass __init__ that the task doesn't need, though its tests are well organized."
+      ]
+    },
+    "l1-notifications/r2": {
+      "1": [
+        "medium",
+        "Implementation 1 is more direct and handles positional placeholders (IndexError) and empty-string addresses. Implementation 2 handles neither, so an empty address is sent to instead of skipped, and it adds a _Route/_try_send layer that brings little."
+      ],
+      "2": [
+        "medium",
+        "Implementation 2 does the same job with less machinery (no _Route or generator), treats empty addresses as missing, and handles IndexError for positional placeholders, where Implementation 1 does neither. Both test suites are thorough, each covering edge cases the other skips."
+      ]
+    },
+    "l1-notifications/r3": {
+      "1": [
+        "medium",
+        "Implementation 1 adds abstractions the task does not ask for: a DeliveryReport invariant check with its own test file, _Route with a method, and logging. It also sends to empty-string addresses. Implementation 2's list-of-outcomes helper is simpler, it treats empty addresses as missing, and its tests cover edge cases well, though its typing style is a little dated."
+      ],
+      "2": [
+        "medium",
+        "Implementation 2 adds a DeliveryReport invariant check, logging and a _Route class with behavior that the task doesn't need, and it treats an empty-string address as usable. Implementation 1 stays closer to the spec, and its tests cover more relevant cases, such as DeliveryError subclasses and preference order."
+      ]
+    },
+    "l2-report-refactor/r1": {
+      "1": [
+        "low",
+        "Both keep text and HTML output identical and produce the required Markdown, but Implementation 1 does it more directly, while Implementation 2 adds indirection the task doesn't need (lambda-driven _total_by with a TypeVar, a _Table type, constants like _NO_TOP_PRODUCT) and row validation nobody asked for. Implementation 2's tests are more thorough (exact empty-file output in every format, ties checked in every format, missing columns), but Implementation 1 is the leaner code to maintain."
+      ],
+      "2": [
+        "medium",
+        "Impl 1's shared _Table/_highlights model means a new format only lays out tables, while Impl 2 repeats headings, column lists and row comprehensions in every renderer. Impl 1 is heavier and adds row validation that wasn't asked for, but its tests are much more thorough: exact empty output for all formats, ties, short rows, and rejection before the file is read."
+      ]
+    },
+    "l2-report-refactor/r2": {
+      "1": [
+        "medium",
+        "Implementation 2 is a compact, right-sized single-file refactor, but its tests are thin: no tie-break test, and the empty-file test checks only part of the Markdown output. Implementation 1 splits the code cleanly into summary and formats modules, gives a clear line-numbered error for short rows, and has strong tests that pin the subtle behaviours (summing in file order, -0.00, ties, exact empty output in every format)."
+      ],
+      "2": [
+        "medium",
+        "Impl 1 is a lean, well-sized single-file refactor, while Impl 2 splits into three modules and adds CSV validation, which goes beyond the task. Even so, Impl 2's tests pin the byte-identical edge cases (empty input in every format, summation order, -0.00, ties, rejecting a bad format before reading), which Impl 1 barely covers."
+      ]
+    },
+    "l2-report-refactor/r3": {
+      "1": [
+        "medium",
+        "Implementation 2 adds a format-neutral ReportContent layer that is over-engineered and leaky: Column carries a plain-text width, so the 'neutral' content knows about the text layout. Implementation 1 has straightforward renderers that share row builders, plus fuller tests (exact empty output in all formats and a summation-order test)."
+      ],
+      "2": [
+        "low",
+        "Impl 1 stays in one file and its generic ReportContent makes adding formats easy, though Column.text_width lets text layout leak into the supposedly neutral model. Impl 2 is clean but spreads the change over three modules with verbose, repetitive tests, so the two are close."
+      ]
+    },
+    "m1-pricing-gold-tier/r1": {
+      "1": [
+        "medium",
+        "Both keep regular and silver behaviour correct, but Impl 1 models shipping with a single free-shipping flag, while Impl 2 adds an Optional per-tier threshold field only to keep the dead silver >100 rule. Impl 1's tests are also much more thorough (boundaries, express, receipts for all tiers, empty silver order), while Impl 2 has fewer tests and a weak 'discount not in' check."
+      ],
+      "2": [
+        "medium",
+        "Both are very similar tier-table refactors that keep regular/silver behavior; Impl 1 keeps the dead silver >100 rule as an extra tier field, while Impl 2 drops it, avoids mutating the total, and is slightly cleaner. Impl 2's tests are clearly more thorough, covering the 50 boundary, the silver threshold, an empty order and the gold express receipt."
+      ]
+    },
+    "m1-pricing-gold-tier/r2": {
+      "1": [
+        "low",
+        "Impl 2 has clearly better tests, but its tier model uses Callable lambda predicates and added type hints, which is over-engineered for a boolean rule. Impl 1 stays close to the original with a small, pragmatic change, though it uses tuple indexing and a dict return value and keeps a branch it admits is dead."
+      ],
+      "2": [
+        "low",
+        "Impl 1 over-engineers shipping waivers as per-tier lambdas, and Impl 2 under-engineers with tuple indexing, dict results, tier rules split across a table and if-chains, and dead code it keeps on purpose. Impl 1's much stronger regression tests, including the float-summation case, tip it despite the larger change."
+      ]
+    },
+    "m1-pricing-gold-tier/r3": {
+      "1": [
+        "medium",
+        "Impl 2 is a smaller diff, but its shared _breakdown returns a 5-tuple that mixes formatted display strings with calculation, and calc throws the strings away. Impl 1 has a clean tier/breakdown split and much stronger regression tests (parametrized regular/silver totals, unknown type, silver large-order receipt)."
+      ],
+      "2": [
+        "medium",
+        "Impl 1 is the smaller change, but its _breakdown returns a 5-tuple and builds formatted strings that calc never uses, mixing presentation into computation. Impl 2 has a clean tier/breakdown design and much better tests: parametrized regular/silver totals, a silver large order, an unknown type, and gold."
+      ]
+    },
+    "m2-rate-limiter/r1": {
+      "1": [
+        "low",
+        "Both are correct and well tested, and both handle float rounding and a clock that steps backwards. Implementation 2 is thread-safe and rejects an infinite refill rate, which matters for a shared client wrapper; Implementation 1 only documents that it is not thread-safe, and its typing is tidier."
+      ],
+      "2": [
+        "low",
+        "Both are clean and correct, and both handle float rounding and a clock that steps back. Implementation 1 is also thread-safe, rejects an infinite rate, and its tests cover concurrency and client errors, which tips it slightly despite the unneeded properties."
+      ]
+    },
+    "m2-rate-limiter/r2": {
+      "1": [
+        "low",
+        "Implementation 1 over-engineers the client with generic Protocol types, has no float tolerance, and moves its reference time back when the clock steps backwards, so that interval is credited again later. Implementation 2 handles those cases correctly but adds no tests at all, which makes it harder to merge and maintain."
+      ],
+      "2": [
+        "medium",
+        "Implementation 1 is leaner and handles float tolerance and backward clocks better, but it adds no tests at all. Implementation 2 over-engineers with generic Protocol typing and re-credits time after a clock steps back, yet its solid test suite makes it the safer merge."
+      ]
+    },
+    "m2-rate-limiter/r3": {
+      "1": [
+        "high",
+        "Implementation 2 never checks that clock is callable and does not type-check tokens, so bad arguments raise TypeError instead of the required ValueError; it also has no float tolerance and re-credits time after the clock steps backwards. Implementation 1 handles all of these and its tests cover them."
+      ],
+      "2": [
+        "high",
+        "Implementation 1 never checks that clock is callable and does no type check on tokens, so non-numeric input raises TypeError instead of the required ValueError; it also re-credits time after a backward clock step and has no float tolerance. Implementation 2 meets the full contract and its tests cover rounding, backward clocks and client failures."
+      ]
+    },
+    "s1-pagination-bugfix/r1": {
+      "1": [
+        "high",
+        "The two fixes are almost the same, but Implementation 2 commits generated .mypy_cache files and adds a DEFAULT_PER_PAGE constant the task does not need. Both test suites are good: Implementation 1 has a strong test that every item appears on exactly one page, and Implementation 2 checks error messages."
+      ],
+      "2": [
+        "medium",
+        "Both fixes are correct and well tested; Implementation 1's divmod is slightly clearer than the -(-n // p) trick. However, Implementation 1 commits .mypy_cache artifacts and adds an unneeded DEFAULT_PER_PAGE constant, so Implementation 2 is the cleaner change to merge."
+      ]
+    },
+    "s1-pagination-bugfix/r2": {
+      "1": [
+        "low",
+        "Both are correct. Implementation 2 is the minimal change using the standard ceiling-division idiom, while Implementation 1 adds an unneeded DEFAULT_PER_PAGE constant in exchange for a shared per_page validator. Implementation 1's tests check error messages carefully and Implementation 2's tests check pagination end to end, so they balance out."
+      ],
+      "2": [
+        "low",
+        "Both are correct with comparable tests: Implementation 1 has a round-trip consistency test, while Implementation 2 matches on error messages. Implementation 1 is a smaller, more focused diff, whereas Implementation 2 adds a constant the task doesn't need and rewrites the whole file."
+      ]
+    },
+    "s1-pagination-bugfix/r3": {
+      "1": [
+        "low",
+        "Implementation 2 reads more clearly, with divmod and one generic _require_at_least_one helper used for every check. Implementation 1 has the stronger test, a parametrized check that total_pages agrees with paginate across many item counts, so neither is clearly better to merge."
+      ],
+      "2": [
+        "low",
+        "Implementation 1 reads a little better, with one validation helper used for both arguments and an explicit divmod. Implementation 2 adds a strong parametrized test showing total_pages agrees with paginate, so they balance out."
+      ]
+    },
+    "s2-temperature-trap/r1": {
+      "1": [
+        "medium",
+        "Implementation 1 uses exact Fraction arithmetic and a str() round-trip trick, and adds a non-finite check nobody asked for, which is heavy machinery for a simple conversion even though its tests are stricter and it rejects NaN. Implementation 2 handles the absolute-zero trap correctly with a simple Celsius pivot and is easier to read and maintain."
+      ],
+      "2": [
+        "medium",
+        "Implementation 2's exact-Fraction arithmetic with the str() round-trip trick and its NaN/inf rejection are clever and a bit more robust, but they add machinery and behavior the task never asked for. Implementation 1 meets the spec simply, with correct boundary handling and good tests."
+      ]
+    },
+    "s2-temperature-trap/r2": {
+      "1": [
+        "low",
+        "Both are correct and behave the same way: stated absolute-zero values, a same-unit shortcut and a Celsius pivot, and Implementation 2's plain dicts read a little more easily. Implementation 1's tests are more targeted (exact same-unit result, below-zero check still applied on same-unit calls, source-unit check, error names the unit), which tips it slightly."
+      ],
+      "2": [
+        "low",
+        "The two behave the same: both check the source unit's literal absolute zero and both short-circuit when the units match. Implementation 1 is more compact, while Implementation 2 groups each unit's data together and has more targeted tests (same-unit exactness, the source-unit boundary, the unit named in the error), though its data is defined below the function that uses it."
+      ]
+    },
+    "s2-temperature-trap/r3": {
+      "1": [
+        "medium",
+        "Implementation 2 has no same-unit shortcut, so K->K or F->F conversions pick up float noise (0.1 K becomes 0.10000000000002274), while Implementation 1 returns the value unchanged and tests for it. Implementation 2's tuple-membership handling of unhashable units is a nice touch but matters less."
+      ],
+      "2": [
+        "low",
+        "Implementation 1 has no same-unit shortcut, so converting K to K (or F to F) can come back with float noise, while Implementation 2 returns the value unchanged and tests that. Implementation 1 does handle unhashable unit inputs more gracefully, but that edge case matters less."
+      ]
+    }
+  },
+  "repetitions": 3
+}

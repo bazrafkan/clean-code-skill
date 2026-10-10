@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "2",
+      "design": "1",
+      "robustness": "1",
+      "tests": "1",
+      "scope": "2",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Impl 1's shared _Table/_highlights model means a new format only lays out tables, while Impl 2 repeats headings, column lists and row comprehensions in every renderer. Impl 1 is heavier and adds row validation that wasn't asked for, but its tests are much more thorough: exact empty output for all formats, ties, short rows, and rejection before the file is read."
+    },
+    {
+      "pair": 2,
+      "readability": "tie",
+      "design": "tie",
+      "robustness": "2",
+      "tests": "2",
+      "scope": "1",
+      "overall": "2",
+      "confidence": "medium",
+      "reason": "Impl 1 is a lean, well-sized single-file refactor, while Impl 2 splits into three modules and adds CSV validation, which goes beyond the task. Even so, Impl 2's tests pin the byte-identical edge cases (empty input in every format, summation order, -0.00, ties, rejecting a bad format before reading), which Impl 1 barely covers."
+    },
+    {
+      "pair": 3,
+      "readability": "tie",
+      "design": "tie",
+      "robustness": "tie",
+      "tests": "tie",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "low",
+      "reason": "Impl 1 stays in one file and its generic ReportContent makes adding formats easy, though Column.text_width lets text layout leak into the supposedly neutral model. Impl 2 is clean but spreads the change over three modules with verbose, repetitive tests, so the two are close."
+    }
+  ]
+}

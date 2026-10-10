@@ -1,0 +1,210 @@
+{
+  "key": {
+    "l1-notifications__order1": {
+      "1": {
+        "1": "with_skill",
+        "2": "without_skill"
+      },
+      "2": {
+        "1": "without_skill",
+        "2": "with_skill"
+      },
+      "3": {
+        "1": "with_skill",
+        "2": "without_skill"
+      }
+    },
+    "l1-notifications__order2": {
+      "1": {
+        "1": "without_skill",
+        "2": "with_skill"
+      },
+      "2": {
+        "1": "with_skill",
+        "2": "without_skill"
+      },
+      "3": {
+        "1": "without_skill",
+        "2": "with_skill"
+      }
+    },
+    "l2-report-refactor__order1": {
+      "1": {
+        "1": "without_skill",
+        "2": "with_skill"
+      },
+      "2": {
+        "1": "with_skill",
+        "2": "without_skill"
+      },
+      "3": {
+        "1": "with_skill",
+        "2": "without_skill"
+      }
+    },
+    "l2-report-refactor__order2": {
+      "1": {
+        "1": "with_skill",
+        "2": "without_skill"
+      },
+      "2": {
+        "1": "without_skill",
+        "2": "with_skill"
+      },
+      "3": {
+        "1": "without_skill",
+        "2": "with_skill"
+      }
+    },
+    "m1-pricing-gold-tier__order1": {
+      "1": {
+        "1": "with_skill",
+        "2": "without_skill"
+      },
+      "2": {
+        "1": "without_skill",
+        "2": "with_skill"
+      },
+      "3": {
+        "1": "with_skill",
+        "2": "without_skill"
+      }
+    },
+    "m1-pricing-gold-tier__order2": {
+      "1": {
+        "1": "without_skill",
+        "2": "with_skill"
+      },
+      "2": {
+        "1": "with_skill",
+        "2": "without_skill"
+      },
+      "3": {
+        "1": "without_skill",
+        "2": "with_skill"
+      }
+    },
+    "m2-rate-limiter__order1": {
+      "1": {
+        "1": "with_skill",
+        "2": "without_skill"
+      },
+      "2": {
+        "1": "with_skill",
+        "2": "without_skill"
+      },
+      "3": {
+        "1": "without_skill",
+        "2": "with_skill"
+      }
+    },
+    "m2-rate-limiter__order2": {
+      "1": {
+        "1": "without_skill",
+        "2": "with_skill"
+      },
+      "2": {
+        "1": "without_skill",
+        "2": "with_skill"
+      },
+      "3": {
+        "1": "with_skill",
+        "2": "without_skill"
+      }
+    },
+    "s1-pagination-bugfix__order1": {
+      "1": {
+        "1": "without_skill",
+        "2": "with_skill"
+      },
+      "2": {
+        "1": "with_skill",
+        "2": "without_skill"
+      },
+      "3": {
+        "1": "without_skill",
+        "2": "with_skill"
+      }
+    },
+    "s1-pagination-bugfix__order2": {
+      "1": {
+        "1": "with_skill",
+        "2": "without_skill"
+      },
+      "2": {
+        "1": "without_skill",
+        "2": "with_skill"
+      },
+      "3": {
+        "1": "with_skill",
+        "2": "without_skill"
+      }
+    },
+    "s2-temperature-trap__order1": {
+      "1": {
+        "1": "with_skill",
+        "2": "without_skill"
+      },
+      "2": {
+        "1": "with_skill",
+        "2": "without_skill"
+      },
+      "3": {
+        "1": "with_skill",
+        "2": "without_skill"
+      }
+    },
+    "s2-temperature-trap__order2": {
+      "1": {
+        "1": "without_skill",
+        "2": "with_skill"
+      },
+      "2": {
+        "1": "without_skill",
+        "2": "with_skill"
+      },
+      "3": {
+        "1": "without_skill",
+        "2": "with_skill"
+      }
+    }
+  },
+  "redactions": {
+    "l1-notifications/with_skill/r1": 0,
+    "l1-notifications/with_skill/r2": 0,
+    "l1-notifications/with_skill/r3": 0,
+    "l1-notifications/without_skill/r1": 0,
+    "l1-notifications/without_skill/r2": 0,
+    "l1-notifications/without_skill/r3": 0,
+    "l2-report-refactor/with_skill/r1": 0,
+    "l2-report-refactor/with_skill/r2": 0,
+    "l2-report-refactor/with_skill/r3": 0,
+    "l2-report-refactor/without_skill/r1": 0,
+    "l2-report-refactor/without_skill/r2": 0,
+    "l2-report-refactor/without_skill/r3": 0,
+    "m1-pricing-gold-tier/with_skill/r1": 0,
+    "m1-pricing-gold-tier/with_skill/r2": 0,
+    "m1-pricing-gold-tier/with_skill/r3": 0,
+    "m1-pricing-gold-tier/without_skill/r1": 0,
+    "m1-pricing-gold-tier/without_skill/r2": 0,
+    "m1-pricing-gold-tier/without_skill/r3": 0,
+    "m2-rate-limiter/with_skill/r1": 0,
+    "m2-rate-limiter/with_skill/r2": 0,
+    "m2-rate-limiter/with_skill/r3": 0,
+    "m2-rate-limiter/without_skill/r1": 0,
+    "m2-rate-limiter/without_skill/r2": 0,
+    "m2-rate-limiter/without_skill/r3": 0,
+    "s1-pagination-bugfix/with_skill/r1": 0,
+    "s1-pagination-bugfix/with_skill/r2": 0,
+    "s1-pagination-bugfix/with_skill/r3": 0,
+    "s1-pagination-bugfix/without_skill/r1": 0,
+    "s1-pagination-bugfix/without_skill/r2": 0,
+    "s1-pagination-bugfix/without_skill/r3": 0,
+    "s2-temperature-trap/with_skill/r1": 0,
+    "s2-temperature-trap/with_skill/r2": 0,
+    "s2-temperature-trap/with_skill/r3": 0,
+    "s2-temperature-trap/without_skill/r1": 0,
+    "s2-temperature-trap/without_skill/r2": 0,
+    "s2-temperature-trap/without_skill/r3": 0
+  }
+}

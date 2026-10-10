@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "1",
+      "design": "1",
+      "robustness": "1",
+      "tests": "tie",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Implementation 1 is a direct, minimal loop and also maps positional-placeholder IndexError to ValueError, which Implementation 2 misses. Implementation 2 adds a _Route abstraction, logging and a hand-written dataclass __init__ that the task doesn't need, though its tests are well organized."
+    },
+    {
+      "pair": 2,
+      "readability": "2",
+      "design": "2",
+      "robustness": "2",
+      "tests": "tie",
+      "scope": "2",
+      "overall": "2",
+      "confidence": "medium",
+      "reason": "Implementation 2 does the same job with less machinery (no _Route or generator), treats empty addresses as missing, and handles IndexError for positional placeholders, where Implementation 1 does neither. Both test suites are thorough, each covering edge cases the other skips."
+    },
+    {
+      "pair": 3,
+      "readability": "tie",
+      "design": "1",
+      "robustness": "1",
+      "tests": "1",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Implementation 2 adds a DeliveryReport invariant check, logging and a _Route class with behavior that the task doesn't need, and it treats an empty-string address as usable. Implementation 1 stays closer to the spec, and its tests cover more relevant cases, such as DeliveryError subclasses and preference order."
+    }
+  ]
+}

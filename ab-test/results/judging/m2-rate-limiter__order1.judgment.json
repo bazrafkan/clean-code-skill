@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "tie",
+      "design": "tie",
+      "robustness": "2",
+      "tests": "tie",
+      "scope": "tie",
+      "overall": "2",
+      "confidence": "low",
+      "reason": "Both are correct and well tested, and both handle float rounding and a clock that steps backwards. Implementation 2 is thread-safe and rejects an infinite refill rate, which matters for a shared client wrapper; Implementation 1 only documents that it is not thread-safe, and its typing is tidier."
+    },
+    {
+      "pair": 2,
+      "readability": "tie",
+      "design": "2",
+      "robustness": "2",
+      "tests": "1",
+      "scope": "2",
+      "overall": "1",
+      "confidence": "low",
+      "reason": "Implementation 1 over-engineers the client with generic Protocol types, has no float tolerance, and moves its reference time back when the clock steps backwards, so that interval is credited again later. Implementation 2 handles those cases correctly but adds no tests at all, which makes it harder to merge and maintain."
+    },
+    {
+      "pair": 3,
+      "readability": "tie",
+      "design": "tie",
+      "robustness": "1",
+      "tests": "1",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "high",
+      "reason": "Implementation 2 never checks that clock is callable and does not type-check tokens, so bad arguments raise TypeError instead of the required ValueError; it also has no float tolerance and re-credits time after the clock steps backwards. Implementation 1 handles all of these and its tests cover them."
+    }
+  ]
+}

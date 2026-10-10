@@ -1,0 +1,182 @@
+{
+  "s1-pagination-bugfix/with_skill/r1": {
+    "tokens": 98512,
+    "tool_uses": 15,
+    "duration_ms": 100936
+  },
+  "s1-pagination-bugfix/with_skill/r2": {
+    "tokens": 87956,
+    "tool_uses": 14,
+    "duration_ms": 86759
+  },
+  "s1-pagination-bugfix/with_skill/r3": {
+    "tokens": 86145,
+    "tool_uses": 14,
+    "duration_ms": 81282
+  },
+  "s1-pagination-bugfix/without_skill/r1": {
+    "tokens": 76441,
+    "tool_uses": 7,
+    "duration_ms": 37456
+  },
+  "s1-pagination-bugfix/without_skill/r2": {
+    "tokens": 76666,
+    "tool_uses": 7,
+    "duration_ms": 169007
+  },
+  "s1-pagination-bugfix/without_skill/r3": {
+    "tokens": 76552,
+    "tool_uses": 7,
+    "duration_ms": 38484
+  },
+  "s2-temperature-trap/with_skill/r1": {
+    "tokens": 101147,
+    "tool_uses": 17,
+    "duration_ms": 220402
+  },
+  "s2-temperature-trap/with_skill/r2": {
+    "tokens": 111878,
+    "tool_uses": 17,
+    "duration_ms": 924981
+  },
+  "s2-temperature-trap/with_skill/r3": {
+    "tokens": 107375,
+    "tool_uses": 14,
+    "duration_ms": 192523
+  },
+  "s2-temperature-trap/without_skill/r1": {
+    "tokens": 81366,
+    "tool_uses": 9,
+    "duration_ms": 95257
+  },
+  "s2-temperature-trap/without_skill/r2": {
+    "tokens": 77831,
+    "tool_uses": 7,
+    "duration_ms": 56184
+  },
+  "s2-temperature-trap/without_skill/r3": {
+    "tokens": 80343,
+    "tool_uses": 10,
+    "duration_ms": 96064
+  },
+  "m1-pricing-gold-tier/with_skill/r1": {
+    "tokens": 128113,
+    "tool_uses": 28,
+    "duration_ms": 417542
+  },
+  "m1-pricing-gold-tier/with_skill/r2": {
+    "tokens": 127331,
+    "tool_uses": 29,
+    "duration_ms": 494986
+  },
+  "m1-pricing-gold-tier/with_skill/r3": {
+    "tokens": 120904,
+    "tool_uses": 23,
+    "duration_ms": 491353
+  },
+  "m1-pricing-gold-tier/without_skill/r1": {
+    "tokens": 88387,
+    "tool_uses": 10,
+    "duration_ms": 189017
+  },
+  "m1-pricing-gold-tier/without_skill/r2": {
+    "tokens": 86277,
+    "tool_uses": 12,
+    "duration_ms": 132262
+  },
+  "m1-pricing-gold-tier/without_skill/r3": {
+    "tokens": 85396,
+    "tool_uses": 12,
+    "duration_ms": 119717
+  },
+  "m2-rate-limiter/with_skill/r1": {
+    "tokens": 138474,
+    "tool_uses": 33,
+    "duration_ms": 446552
+  },
+  "m2-rate-limiter/with_skill/r2": {
+    "tokens": 136241,
+    "tool_uses": 27,
+    "duration_ms": 536561
+  },
+  "m2-rate-limiter/with_skill/r3": {
+    "tokens": 106849,
+    "tool_uses": 17,
+    "duration_ms": 216856
+  },
+  "m2-rate-limiter/without_skill/r1": {
+    "tokens": 84821,
+    "tool_uses": 10,
+    "duration_ms": 114174
+  },
+  "m2-rate-limiter/without_skill/r2": {
+    "tokens": 83803,
+    "tool_uses": 6,
+    "duration_ms": 106250
+  },
+  "m2-rate-limiter/without_skill/r3": {
+    "tokens": 85578,
+    "tool_uses": 9,
+    "duration_ms": 115820
+  },
+  "l1-notifications/with_skill/r1": {
+    "tokens": 142397,
+    "tool_uses": 33,
+    "duration_ms": 460704
+  },
+  "l1-notifications/with_skill/r2": {
+    "tokens": 138284,
+    "tool_uses": 38,
+    "duration_ms": 456157
+  },
+  "l1-notifications/with_skill/r3": {
+    "tokens": 138917,
+    "tool_uses": 38,
+    "duration_ms": 409881
+  },
+  "l1-notifications/without_skill/r1": {
+    "tokens": 87653,
+    "tool_uses": 13,
+    "duration_ms": 124473
+  },
+  "l1-notifications/without_skill/r2": {
+    "tokens": 96066,
+    "tool_uses": 22,
+    "duration_ms": 192007
+  },
+  "l1-notifications/without_skill/r3": {
+    "tokens": 93640,
+    "tool_uses": 23,
+    "duration_ms": 189626
+  },
+  "l2-report-refactor/with_skill/r1": {
+    "tokens": 173854,
+    "tool_uses": 30,
+    "duration_ms": 665313
+  },
+  "l2-report-refactor/with_skill/r2": {
+    "tokens": 183292,
+    "tool_uses": 40,
+    "duration_ms": 749806
+  },
+  "l2-report-refactor/with_skill/r3": {
+    "tokens": 146567,
+    "tool_uses": 41,
+    "duration_ms": 530307
+  },
+  "l2-report-refactor/without_skill/r1": {
+    "tokens": 114128,
+    "tool_uses": 18,
+    "duration_ms": 453180
+  },
+  "l2-report-refactor/without_skill/r2": {
+    "tokens": 97273,
+    "tool_uses": 12,
+    "duration_ms": 202056
+  },
+  "l2-report-refactor/without_skill/r3": {
+    "tokens": 109779,
+    "tool_uses": 13,
+    "duration_ms": 346998
+  }
+}

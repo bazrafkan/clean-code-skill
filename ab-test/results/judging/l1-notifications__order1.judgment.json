@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "tie",
+      "design": "2",
+      "robustness": "2",
+      "tests": "tie",
+      "scope": "2",
+      "overall": "2",
+      "confidence": "medium",
+      "reason": "Implementation 2 is a simpler design that still covers the spec, and it maps positional-placeholder IndexError to ValueError, which Implementation 1 misses. Implementation 1 adds logging, a _Route abstraction, a Channel enum and an awkward dataclass(init=False) with a hand-written __init__, none of which the task needs."
+    },
+    {
+      "pair": 2,
+      "readability": "1",
+      "design": "1",
+      "robustness": "1",
+      "tests": "tie",
+      "scope": "tie",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Implementation 1 is more direct and handles positional placeholders (IndexError) and empty-string addresses. Implementation 2 handles neither, so an empty address is sent to instead of skipped, and it adds a _Route/_try_send layer that brings little."
+    },
+    {
+      "pair": 3,
+      "readability": "tie",
+      "design": "2",
+      "robustness": "2",
+      "tests": "tie",
+      "scope": "2",
+      "overall": "2",
+      "confidence": "medium",
+      "reason": "Implementation 1 adds abstractions the task does not ask for: a DeliveryReport invariant check with its own test file, _Route with a method, and logging. It also sends to empty-string addresses. Implementation 2's list-of-outcomes helper is simpler, it treats empty addresses as missing, and its tests cover edge cases well, though its typing style is a little dated."
+    }
+  ]
+}

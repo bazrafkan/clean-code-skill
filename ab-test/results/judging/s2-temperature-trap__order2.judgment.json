@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "1",
+      "design": "1",
+      "robustness": "2",
+      "tests": "tie",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Implementation 2's exact-Fraction arithmetic with the str() round-trip trick and its NaN/inf rejection are clever and a bit more robust, but they add machinery and behavior the task never asked for. Implementation 1 meets the spec simply, with correct boundary handling and good tests."
+    },
+    {
+      "pair": 2,
+      "readability": "1",
+      "design": "tie",
+      "robustness": "tie",
+      "tests": "2",
+      "scope": "tie",
+      "overall": "2",
+      "confidence": "low",
+      "reason": "The two behave the same: both check the source unit's literal absolute zero and both short-circuit when the units match. Implementation 1 is more compact, while Implementation 2 groups each unit's data together and has more targeted tests (same-unit exactness, the source-unit boundary, the unit named in the error), though its data is defined below the function that uses it."
+    },
+    {
+      "pair": 3,
+      "readability": "tie",
+      "design": "tie",
+      "robustness": "2",
+      "tests": "tie",
+      "scope": "tie",
+      "overall": "2",
+      "confidence": "low",
+      "reason": "Implementation 1 has no same-unit shortcut, so converting K to K (or F to F) can come back with float noise, while Implementation 2 returns the value unchanged and tests that. Implementation 1 does handle unhashable unit inputs more gracefully, but that edge case matters less."
+    }
+  ]
+}

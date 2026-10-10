@@ -1,0 +1,62 @@
+{
+  "s1-pagination-bugfix__order1": {
+    "tokens": 87411,
+    "tool_uses": 2,
+    "duration_ms": 27085
+  },
+  "s1-pagination-bugfix__order2": {
+    "tokens": 86881,
+    "tool_uses": 2,
+    "duration_ms": 21346
+  },
+  "s2-temperature-trap__order1": {
+    "tokens": 91881,
+    "tool_uses": 2,
+    "duration_ms": 102238
+  },
+  "s2-temperature-trap__order2": {
+    "tokens": 92669,
+    "tool_uses": 2,
+    "duration_ms": 60983
+  },
+  "m1-pricing-gold-tier__order1": {
+    "tokens": 101398,
+    "tool_uses": 2,
+    "duration_ms": 73516
+  },
+  "m1-pricing-gold-tier__order2": {
+    "tokens": 99207,
+    "tool_uses": 2,
+    "duration_ms": 139045
+  },
+  "m2-rate-limiter__order1": {
+    "tokens": 104996,
+    "tool_uses": 2,
+    "duration_ms": 45055
+  },
+  "m2-rate-limiter__order2": {
+    "tokens": 103970,
+    "tool_uses": 2,
+    "duration_ms": 58541
+  },
+  "l1-notifications__order1": {
+    "tokens": 131678,
+    "tool_uses": 4,
+    "duration_ms": 44754
+  },
+  "l1-notifications__order2": {
+    "tokens": 131106,
+    "tool_uses": 4,
+    "duration_ms": 35180
+  },
+  "l2-report-refactor__order1": {
+    "tokens": 129391,
+    "tool_uses": 3,
+    "duration_ms": 90160
+  },
+  "l2-report-refactor__order2": {
+    "tokens": 129148,
+    "tool_uses": 3,
+    "duration_ms": 100653
+  }
+}

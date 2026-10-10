@@ -70,6 +70,19 @@ The GoF principles in full, then one entry per pattern, with:
 
 The file also covers how to choose between similar patterns (Adapter vs Bridge, Decorator vs Proxy, Strategy vs State, Mediator vs Observer…) and how to break up class explosions.
 
+## Does it help? (A/B test)
+
+`ab-test/` contains a pre-registered, blind A/B test of the skill: 6 Python tasks, 36 agent runs, hidden tests and independent judges.
+
+The first round was inconclusive on overall quality:
+- **Quality:** 6 wins, 8 losses and 4 ties in blind review.
+- **Correctness:** identical.
+- **Better with the skill:** tests and function-level metrics.
+- **Worse with the skill:** larger diffs.
+- **Cost:** about +44% tokens.
+
+See `ab-test/results/REPORT.md`.
+
 ## Install
 
 ### Claude Code

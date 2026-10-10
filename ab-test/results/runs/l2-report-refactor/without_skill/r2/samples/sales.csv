@@ -1,0 +1,7 @@
+date,region,product,units,unit_price
+2026-01-03,North,Widget,10,2.50
+2026-01-04,South,Gadget,3,19.99
+2026-01-04,North,Gadget,1,19.99
+2026-01-05,East,Widget,7,2.50
+2026-01-06,South,Doohickey,2,7.25
+2026-01-07,East,Gadget,2,19.99

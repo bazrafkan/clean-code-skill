@@ -36,12 +36,12 @@ For each pair below, compare Implementation 1 and Implementation 2 on these crit
 Judge only what you can see in the diffs. Longer is not better: extra code, comments or abstractions
 that the task does not need count against an implementation. Ties are allowed when there is no real difference.
 
-Write your answer as JSON to {output_path}, with exactly this shape:
+Reply with only a JSON object (no other text, no code fence), with exactly this shape:
 {{"pairs": [{{"pair": <pair number>, "readability": "1"|"2"|"tie", "design": "1"|"2"|"tie",
 "robustness": "1"|"2"|"tie", "tests": "1"|"2"|"tie", "scope": "1"|"2"|"tie", "overall": "1"|"2"|"tie",
 "confidence": "low"|"medium"|"high", "reason": "<at most two sentences>"}}, ...]}}
 
-Read only this packet file. Do not look at any other file or directory. Then reply with exactly one line: DONE
+Read only this packet file. Do not look at any other file or directory, and do not write any files.
 """
 
 

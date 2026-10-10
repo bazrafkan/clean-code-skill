@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "1",
+      "design": "1",
+      "robustness": "2",
+      "tests": "2",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "low",
+      "reason": "Both keep text and HTML output identical and produce the required Markdown, but Implementation 1 does it more directly, while Implementation 2 adds indirection the task doesn't need (lambda-driven _total_by with a TypeVar, a _Table type, constants like _NO_TOP_PRODUCT) and row validation nobody asked for. Implementation 2's tests are more thorough (exact empty-file output in every format, ties checked in every format, missing columns), but Implementation 1 is the leaner code to maintain."
+    },
+    {
+      "pair": 2,
+      "readability": "tie",
+      "design": "tie",
+      "robustness": "1",
+      "tests": "1",
+      "scope": "2",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Implementation 2 is a compact, right-sized single-file refactor, but its tests are thin: no tie-break test, and the empty-file test checks only part of the Markdown output. Implementation 1 splits the code cleanly into summary and formats modules, gives a clear line-numbered error for short rows, and has strong tests that pin the subtle behaviours (summing in file order, -0.00, ties, exact empty output in every format)."
+    },
+    {
+      "pair": 3,
+      "readability": "1",
+      "design": "1",
+      "robustness": "tie",
+      "tests": "1",
+      "scope": "tie",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Implementation 2 adds a format-neutral ReportContent layer that is over-engineered and leaky: Column carries a plain-text width, so the 'neutral' content knows about the text layout. Implementation 1 has straightforward renderers that share row builders, plus fuller tests (exact empty output in all formats and a summation-order test)."
+    }
+  ]
+}

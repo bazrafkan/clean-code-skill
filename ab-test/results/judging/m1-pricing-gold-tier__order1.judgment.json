@@ -1,0 +1,37 @@
+{
+  "pairs": [
+    {
+      "pair": 1,
+      "readability": "1",
+      "design": "1",
+      "robustness": "tie",
+      "tests": "1",
+      "scope": "tie",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Both keep regular and silver behaviour correct, but Impl 1 models shipping with a single free-shipping flag, while Impl 2 adds an Optional per-tier threshold field only to keep the dead silver >100 rule. Impl 1's tests are also much more thorough (boundaries, express, receipts for all tiers, empty silver order), while Impl 2 has fewer tests and a weak 'discount not in' check."
+    },
+    {
+      "pair": 2,
+      "readability": "tie",
+      "design": "1",
+      "robustness": "tie",
+      "tests": "2",
+      "scope": "1",
+      "overall": "1",
+      "confidence": "low",
+      "reason": "Impl 2 has clearly better tests, but its tier model uses Callable lambda predicates and added type hints, which is over-engineered for a boolean rule. Impl 1 stays close to the original with a small, pragmatic change, though it uses tuple indexing and a dict return value and keeps a branch it admits is dead."
+    },
+    {
+      "pair": 3,
+      "readability": "1",
+      "design": "1",
+      "robustness": "tie",
+      "tests": "1",
+      "scope": "2",
+      "overall": "1",
+      "confidence": "medium",
+      "reason": "Impl 2 is a smaller diff, but its shared _breakdown returns a 5-tuple that mixes formatted display strings with calculation, and calc throws the strings away. Impl 1 has a clean tier/breakdown split and much stronger regression tests (parametrized regular/silver totals, unknown type, silver large-order receipt)."
+    }
+  ]
+}
