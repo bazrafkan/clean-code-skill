@@ -19,7 +19,33 @@ Some fields are current practice rather than the book's text:
 - "Notes" mix the book's implementation advice with current practice.
 - Costs the book doesn't list are marked as such.
 
-**When to use a pattern at all.** The book warns that a pattern buys flexibility by adding indirection, so apply it only when that flexibility is actually needed. This skill sharpens that to *needed now* (YAGNI). The exception is hard-to-reverse seams such as public APIs, data formats and vendor boundaries, which deserve some anticipation.
+---
+
+## Principles behind every pattern
+
+- **Program to an interface, not an implementation.**
+  - Where an abstraction exists or a seam is real, depend on it rather than on the concrete class.
+  - Otherwise, a class's public API is its interface. Don't add an interface for the sake of it.
+- **Favor object composition over class inheritance.**
+  - Inheritance is white-box reuse: fixed at compile time, coupled to the parent's internals.
+  - Composition is black-box reuse: parts can be swapped through their interfaces.
+  - Inherit for substitutability, preferably from abstract types, not merely to reuse code.
+- **Encapsulate what varies.** Put the aspect that varies (or demonstrably will) behind its own interface, so it can change without redesign. Examples: an algorithm, a state, which class to create, a platform, a request.
+- **Flexibility costs readability.**
+  - Highly parameterized, dynamic designs are harder to understand than static code.
+  - Use them only when they simplify more than they complicate, and in recognizable shapes.
+
+### When and how to apply one
+- **Start from a concrete problem or smell, never from the wish to use a pattern.**
+  - The book warns that patterns add indirection and should be applied only when their flexibility is actually needed.
+  - This skill sharpens that to *needed now* (YAGNI).
+  - The exception is hard-to-reverse seams, such as public APIs, data formats and vendor boundaries, which deserve some anticipation.
+  - Two or three stable cases rarely justify a pattern.
+- **Read the pattern's entry below first, especially "Use when" and "Gains / Costs".** Know what it lets vary and what it costs.
+- **Check the language and the codebase's existing tools first.** Many patterns collapse to a lambda, a sealed type with `match`, a generator, an event, a wrapper or injection. Each entry's "Modern form" shows how.
+- **Use patterns as refactoring targets.** When code degrades in a known way, refactor toward the pattern that removes that cause. Typical cases: a repeated switch, a class explosion, scattered `new ConcreteX()`.
+- **Name participants in domain terms that keep the role visible** (N3): `PdfExportStrategy`, `RetryingClientDecorator`, `createParser()`. Use one naming convention per role.
+- **Combine patterns freely when each solves a real need.** Good designs often contain several.
 
 ---
 

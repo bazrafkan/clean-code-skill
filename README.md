@@ -15,10 +15,15 @@ Where the books give Java- or C++-era specifics, the skill keeps the underlying 
 
 ```
 clean-code/
-├── SKILL.md                     # loaded when the skill triggers
+├── SKILL.md                     # compact core (~3.5k tokens), loaded when the skill triggers
 └── references/
-    └── design-patterns.md       # full catalog, read on demand
+    ├── clean-code-rules.md      # every rule in full, with rationale and an example
+    └── design-patterns.md       # principles + all 23 GoF patterns
 ```
+
+Only `SKILL.md` enters the context when the skill triggers. The reference files are read on demand, so they cost nothing until needed.
+
+`SKILL.md` stays under 5,000 tokens on purpose: after a long conversation is compacted, Claude Code keeps only the first 5,000 tokens of each skill.
 
 ### `clean-code/SKILL.md`
 
@@ -27,25 +32,34 @@ clean-code/
   1. Read the surrounding code.
   2. Make it work in small tested steps.
   3. Do a mandatory "make it right" pass.
-  4. Apply a bounded Boy Scout Rule.
+  4. Stay in scope.
   5. Verify, without ever weakening tests.
-- **Clean Code rules** for:
+- **A "done" checklist**, placed right after the workflow.
+- **Core rules, a few lines per topic:**
   - names, functions, comments and formatting
   - objects versus data structures
-  - error handling, third-party boundaries, tests
-  - classes and modules, systems, simple design and duplication
+  - errors, boundaries, tests
+  - classes and modules, systems
+  - duplication and simplicity
   - concurrency
 - **Design patterns:**
-  - the GoF principles: program to an interface, favor composition over inheritance, encapsulate what varies
-  - when (and when not) to apply a pattern
-  - a "causes of redesign" table and a quick chooser for all 23 patterns, each with its lighter modern form
+  - the principles
+  - when to apply a pattern
   - pattern smells
-- **A final self-review checklist** and a review mode for code reviews.
+  - a quick chooser for all 23 patterns, each with its lighter modern form
+- **A review mode** for code reviews.
 - **Cross-references** to *Clean Code*'s Chapter 17 heuristic codes (G5, N7, T4…).
+
+### `clean-code/references/clean-code-rules.md`
+
+The detailed workflow and every Clean Code rule, with:
+- its rationale and nuances
+- which book advice doesn't transfer literally to modern languages
+- a before/after example
 
 ### `clean-code/references/design-patterns.md`
 
-One entry per GoF pattern, with:
+The GoF principles in full, then one entry per pattern, with:
 - intent and when to use it
 - its shape
 - gains and costs
